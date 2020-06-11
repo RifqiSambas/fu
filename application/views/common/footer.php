@@ -1,4 +1,3 @@
-
 	<footer class="bg-191 pos-relative color-ccc bg-primary pt-50">
 		<div class="abs-tblr pt-50 z--1 text-center">
 			<div class="h-80 pos-relative">
@@ -11,11 +10,11 @@
 				<div class="col-lg-2 col-md-4 col-sm-4">
 					<h5 class="f-title"><b>LINK USHULUDDIN</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-						<li><a href="#">Ilmu Hadits</a></li>
-						<li><a href="#">Studi Agama-Agama</a></li>
-						<li><a href="#">Aqidah dan Filsafar Islam</a></li>
-						<li><a href="#">Tasawuf Psikoterapi</a></li>
-						<li><a href="#">Ilmu Al-Quran dan Hadits</a></li>
+						<li><a href="<?= base_url('') ?>">Ilmu Hadits</a></li>
+						<li><a href="<?= base_url('') ?>">Studi Agama-Agama</a></li>
+						<li><a href="<?= base_url('') ?>">Aqidah dan Filsafar Islam</a></li>
+						<li><a href="<?= base_url('') ?>">Tasawuf Psikoterapi</a></li>
+						<li><a href="<?= base_url('') ?>">Ilmu Al-Quran dan Hadits</a></li>
 					</ul>
 				</div>
 				<!-- col-sm-2 -->
@@ -120,15 +119,15 @@
 
 					<div class="col-sm-12 col-md-6">
 						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
-							<li><a href="#">Beranda</a></li>
-							<li><a href="#">Profil</a></li>
-							<li><a href="#">Akademik</a></li>
-							<li><a href="#">Arsip</a></li>
-							<li><a href="#">Publikasi Karya</a></li>
-							<li><a href="#">Pengabdian</a></li>
-							<li><a href="#">Laboratorium</a></li>
-							<li><a href="#">Pengumuman</a></li>
-							<li><a href="#">Info HMJ</a></li>
+							<li><a href="<?= base_url('') ?>">Beranda</a></li>
+							<li><a href="<?= base_url('/profil') ?>">Profil</a></li>
+							<li><a href="<?= base_url('/akademik') ?>">Akademik</a></li>
+							<li><a href="<?= base_url('/arsip') ?>">Arsip</a></li>
+							<li><a href="<?= base_url('/publikasi') ?>">Publikasi Karya</a></li>
+							<li><a href="<?= base_url('/pengabdian') ?>">Pengabdian</a></li>
+							<li><a href="<?= base_url('/laboratorium') ?>">Laboratorium</a></li>
+							<li><a href="<?= base_url('/pengumuman') ?>">Pengumuman</a></li>
+							<li><a href="<?= base_url('/hmj') ?>">Info HMJ</a></li>
 						</ul>
 					</div>
 					<!-- col-sm-3 -->
