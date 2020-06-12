@@ -7,7 +7,7 @@
 	<div class="row mtb-20">
 		<div class="col-sm-6 col-md-7">
 			<p>
-				<span class="letter-big plr-5 bg-primary color-white bg-primary">S</span>
+				<span class="letter-big plr-5 color-black ">S</span>
 				ecara historis, Fakultas Ushuluddin termasuk fakultas yang paling awal berdiri bersamaan dengan didirikannya UIN ( saat itu masih IAIN ) Sunan Gunung Djati Bandung, pada tahun 1968. Fakultas yang kini telah berusia 45 tahun ini, sepanjang sejarahnya telah telah dipimpin oleh figur-figur yang mumpuni di bidang keilmuan Islam.
 			</p>
 		</div>

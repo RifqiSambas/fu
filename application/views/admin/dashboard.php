@@ -9,14 +9,17 @@
 					<?php foreach ($item as $menuitem) { ?>
 						<div class="brdr-l-grey-2 pl-20 mb-30">
 							<h5>
-								<a href="#"><b><?= $menuitem['nama'] ?></b></a>
+								<a href="<?= base_url($keyname . '/' . $menuitem['url']) ?>" b><?= $menuitem['nama'] ?></b></a>
 							</h5>
 							<ul class="mtb-5 list-li-mr-20 color-blue">
 								<li>
-									<a href="<?= base_url($keyname . '/' . $menuitem['url'] . '/' . strtolower($menuitem['aksi'])) ?>">
-										<i class="mr-5 font-12 ion-<?= $menuitem['icon'] ?>"></i>
-										<?= $menuitem['aksi'] . ' ' . $menuitem['nama'] ?>
-									</a>
+									<form method="post" action="<?= base_url('konten/') ?>">
+										<input type="hidden" name="category" value="<?= $keyname ?>" />
+										<input type="hidden" name="topic" value="<?= $menuitem['url'] ?>" />
+										<button type="submit">
+											<?= $menuitem['aksi'] . " " . $menuitem['nama'] ?>
+										</button>
+									</form>
 								</li>
 							</ul>
 						</div>

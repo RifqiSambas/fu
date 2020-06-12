@@ -14,11 +14,16 @@ class Konten extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'error' => ''
+			'error' => '',
+			'topic' => $_POST['topic'],
+			'category' => $_POST['category'],
 		);
-		$this->load->view('plain', $data);
+		$this->load->view('admin/add', $data);
 	}
 
+	public function trans()
+	{
+	}
 
 	public function simpan()
 	{
