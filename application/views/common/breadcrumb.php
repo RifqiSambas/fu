@@ -8,10 +8,4 @@
 		</b>
 	</a>
 	<h1 class="mtb-20"><b><?= $topic ?></b></h1>
-	<ul class="mb-30 list-li-mr-10 color-lite-black">
-		<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
-		<li><i class="mr-5 font-12 ion-android-person"></i>John Dowson</li>
-		<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15</li>
-		<li><i class="mr-5 font-12 ion-eye"></i>105</li>
-	</ul>
 </div>

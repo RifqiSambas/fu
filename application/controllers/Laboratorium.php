@@ -6,7 +6,10 @@ class Laboratorium extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'laboratorium/wrapper',
+			'pages' => 'common/content',
+			'content' => 'laboratorium/index',
+			'topic' => 'LABORATORIUM',
+			'kategori' => 'laboratorium',
 		);
 
 		$this->load->view('wrapper', $data);

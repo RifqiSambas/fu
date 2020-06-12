@@ -6,7 +6,10 @@ class Profil extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'profil/wrapper',
+			'pages' => 'common/content',
+			'content' => 'profil/index',
+			'topic' => 'PROFIL',
+			'kategori' => 'profil',
 		);
 
 		$this->load->view('wrapper', $data);

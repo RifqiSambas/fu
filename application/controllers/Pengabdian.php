@@ -6,7 +6,10 @@ class Pengabdian extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'profil/wrapper',
+			'pages' => 'common/content',
+			'content' => 'pengabdian/index',
+			'topic' => 'PENGABDIAN',
+			'kategori' => 'pengabdian',
 		);
 
 		$this->load->view('wrapper', $data);

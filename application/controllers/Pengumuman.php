@@ -6,7 +6,10 @@ class Pengumuman extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'profil/wrapper',
+			'pages' => 'common/content',
+			'content' => 'pengumuman/index',
+			'topic' => 'PENGUMUMAN',
+			'kategori' => 'pengumuman',
 		);
 
 		$this->load->view('wrapper', $data);

@@ -7,7 +7,10 @@ class Arsip extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'arsip/index',
+			'pages' => 'common/content',
+			'content' => 'arsip/index',
+			'topic' => 'ARSIP',
+			'kategori' => 'arsip',
 		);
 
 		$this->load->view('wrapper', $data);
@@ -73,6 +76,17 @@ class Arsip extends CI_Controller
 		$this->load->view('wrapper', $data);
 	}
 
+	public function akademik()
+	{
+		$data = array(
+			'pages' => 'common/content',
+			'content' => 'arsip/akademik',
+			'kategori' => 'akademik',
+			'topic' => 'INFORMASI AKADEMIK'
+		);
+
+		$this->load->view('wrapper', $data);
+	}
 
 	public function alumni()
 	{

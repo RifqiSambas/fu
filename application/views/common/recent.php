@@ -1,4 +1,4 @@
-	<h4 class="p-title"><b>MOST READ</b></h4>
+	<h4 class="p-title"><b>KONTEN LAINNYA</b></h4>
 
 	<div class="sided-80x mb-20">
 		<div class="s-left">
@@ -127,7 +127,7 @@
 
 	<!-- START OF SIDEBAR ARTICLES BY AUTHOR -->
 	<div class="mb-30 p-30 card-view">
-		<h4 class="p-title"><b>ARTICLES BY AUTHOR</b></h4>
+		<h4 class="p-title"><b>KONTEN OLEH PENULIS</b></h4>
 
 		<div class="sided-90x mb-20">
 			<div class="s-left br-3 oflow-hidden">
@@ -187,36 +187,3 @@
 	</div>
 	<!-- card-view -->
 	<!-- END OF SIDEBAR ARTICLES BY AUTHOR -->
-
-	<!-- START OF SIDEBAR BANNER-->
-	<div class="plr-30 ptb-50 color-white pos-relative text-center bg-7">
-		<div class="bg-layer-8">
-			<h3><b>REAL ESTATE</b></h3>
-			<p class="mb-15 mt-5 color-white">
-				A perfect place to find your home residential real estate may
-				contain either a single family
-			</p>
-			<h6>
-				<a class="btn-fill-white btn-b-sm plr-10" href="#"><b>READ MORE</b></a>
-			</h6>
-		</div>
-		<!-- banner-area -->
-	</div>
-	<!-- banner-area -->
-	<!-- END OF SIDEBAR BANNER-->
-
-	<!-- START OF SIDEBAR NEWSLETTER -->
-	<div class="mt-30 p-30 plr-40 card-view text-center">
-		<h4><b>NEWSLETTER</b></h4>
-		<p>The best selling Magic-Magazine</p>
-		<img class="mtb-20 max-w-100x mlr-auto" src="images/sidebar-profile-5-100x150.jpg" alt="" />
-
-		<form class="form-sm max-w-400x mlr-auto">
-			<input type="email" placeholder="Yor Email" />
-			<h6>
-				<button class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit">
-					<b>SUBSCRIBE NOW</b>
-				</button>
-			</h6>
-		</form>
-	</div>

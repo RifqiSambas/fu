@@ -16,8 +16,11 @@
 <section class="buku bg-primary color-white ">
 	<div class="container" width="100%">
 		<h4 class="p-title in">
-			<b>BUKU</b> >
-			<a href="#" align="right" class="text-right">SELENGKAPNYA</a>
+			<b>
+				<a href="#" align="right" class="text-right">
+					BUKU
+			</b>
+			</a>
 		</h4>
 
 		<div class="row mb-20">

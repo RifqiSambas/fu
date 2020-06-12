@@ -3,11 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Hmj extends CI_Controller
 {
-
 	public function index()
 	{
 		$data = array(
-			'pages' => 'hmj/index',
+			'pages' => 'common/content',
+			'content' => 'hmj/index',
+			'topic' => 'HMJ',
+			'kategori' => 'hmj',
 		);
 
 		$this->load->view('wrapper', $data);

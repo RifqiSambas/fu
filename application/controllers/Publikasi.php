@@ -6,7 +6,10 @@ class Publikasi extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'publikasi/wrapper',
+			'pages' => 'common/content',
+			'content' => 'publikasi/index',
+			'topic' => 'PUBLIKASi',
+			'kategori' => 'publikasi',
 		);
 
 		$this->load->view('wrapper', $data);

@@ -6,7 +6,10 @@ class Akademik extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'akademik/index',
+			'pages' => 'common/content',
+			'content' => 'akademik/index',
+			'topic' => 'AKADEMIK',
+			'kategori' => 'akademik',
 		);
 
 		$this->load->view('wrapper', $data);

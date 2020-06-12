@@ -28,6 +28,7 @@
 				<a href="#!">ARSIP<i class="ion-chevron-down"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
 					<li><a href="<?= base_url('arsip/berita') ?>">Berita</a></li>
+					<li><a href="<?= base_url('arsip/akademik') ?>">Informasi Akademik</a></li>
 					<li><a href="<?= base_url('arsip/dekan') ?>">Pojok Dekan</a></li>
 					<li><a href="<?= base_url('arsip/wadek') ?>">Pojok Wadek</a></li>
 					<li><a href="<?= base_url('arsip/dosen') ?>">Artikel Dosen</a></li>

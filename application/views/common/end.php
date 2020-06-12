@@ -5,6 +5,9 @@
 <script src="<?= base_url('assets/plugin-frameworks/bootstrap.js') ?>"></script>
 
 <script src="<?= base_url('assets/common/scripts.js') ?>"></script>
+<script>
+	$('.carousel').carousel()
+</script>
 </body>
 
 </html>

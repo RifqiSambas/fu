@@ -4,6 +4,14 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+
+	config.filebrowserBrowseUrl = 'http://localhost/assets/kcfinder/browse.php?type=files';
+	config.filebrowserImageBrowseUrl = 'http://localhost/assets/kcfinder/browse.php?type=images';
+	config.filebrowserFlashBrowseUrl = 'http://localhost/assets/kcfinder/browse.php?type=flash';
+	config.filebrowserUploadUrl = 'http://localhost/assets/kcfinder/upload.php?type=files';
+	config.filebrowserImageUploadUrl = 'http://localhost/assets/kcfinder/upload.php?type=images';
+	config.filebrowserFlashUploadUrl = 'http://localhost/assets/kcfinder/upload.php?type=flash';
+
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html
