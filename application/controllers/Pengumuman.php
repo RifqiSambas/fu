@@ -3,13 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pengumuman extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengumuman/index',
-			'topic' => 'PENGUMUMAN',
+			'section' => 'PENGUMUMAN',
 			'kategori' => 'pengumuman',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -20,8 +28,10 @@ class Pengumuman extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengumuman/beasiswa',
-			'topic' => 'BEASISWA',
+			'section' => 'BEASISWA',
 			'kategori' => 'pengumuman',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -32,8 +42,10 @@ class Pengumuman extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengumuman/kegiatan',
-			'topic' => 'KEGIATAN KAMI',
+			'section' => 'KEGIATAN KAMI',
 			'kategori' => 'pengumuman',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -44,8 +56,10 @@ class Pengumuman extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengumuman/lowongan',
-			'topic' => 'LOWONGAN KERJA',
+			'section' => 'LOWONGAN KERJA',
 			'kategori' => 'pengumuman',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);

@@ -3,12 +3,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Akademik extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'akademik/index',
-			'topic' => 'AKADEMIK',
+			'section' => 'AKADEMIK',
+			'recent' => $this->M_konten->recent('berita'),
 			'kategori' => 'akademik',
 		);
 
@@ -21,7 +28,8 @@ class Akademik extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'akademik/kalender',
 			'kategori' => 'akademik',
-			'topic' => 'KALENDER AKADEMIK'
+			'section' => 'KALENDER AKADEMIK',
+			'recent' => $this->M_konten->recent('berita'),
 		);
 
 		$this->load->view('wrapper', $data);
@@ -33,7 +41,8 @@ class Akademik extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'akademik/dokumen',
 			'kategori' => 'akademik',
-			'topic' => 'DOKUMEN'
+			'section' => 'DOKUMEN',
+			'recent' => $this->M_konten->recent('berita'),
 		);
 
 		$this->load->view('wrapper', $data);
@@ -45,7 +54,8 @@ class Akademik extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'akademik/pmb',
 			'kategori' => 'akademik',
-			'topic' => 'PENERIMAAN MAHASISWA BARU'
+			'section' => 'PENERIMAAN MAHASISWA BARU',
+			'recent' => $this->M_konten->recent('berita'),
 		);
 
 		$this->load->view('wrapper', $data);

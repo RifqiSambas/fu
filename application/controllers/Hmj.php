@@ -3,13 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Hmj extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'hmj/index',
-			'topic' => 'HMJ',
+			'section' => 'HMJ',
 			'kategori' => 'hmj',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -21,7 +29,9 @@ class Hmj extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'hmj/th',
 			'kategori' => 'info hmj',
-			'topic' => 'JURUSAN TAFSIR HADITS'
+			'section' => 'JURUSAN TAFSIR HADITS',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -33,7 +43,9 @@ class Hmj extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'hmj/fa',
 			'kategori' => 'info hmj',
-			'topic' => 'JURUSAN FILSAFAT AGAMA'
+			'section' => 'JURUSAN FILSAFAT AGAMA',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -45,7 +57,9 @@ class Hmj extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'hmj/pa',
 			'kategori' => 'info hmj',
-			'topic' => 'JURUSAN PERBANDINGAN AGAMA'
+			'section' => 'JURUSAN PERBANDINGAN AGAMA',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -57,7 +71,9 @@ class Hmj extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'hmj/tp',
 			'kategori' => 'info hmj',
-			'topic' => 'JURUSAN TASAWUF PSIKOTERAPI'
+			'section' => 'JURUSAN TASAWUF PSIKOTERAPI',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);

@@ -4,6 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Konten extends CI_Controller
 {
+	public $category = "";
+	public $topic = "";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -30,22 +33,23 @@ class Konten extends CI_Controller
 		$config['upload_path']          = 'assets/uploads/';
 		$config['allowed_types']        = 'gif|jpg|jpeg|png';
 		$config['max_size']             = 10000;
-		$config['max_width']            = 1024;
-		$config['max_height']           = 768;
 		$config['encrypt_name'] 				= TRUE; //nama yang terupload nantinya
 
 		$this->upload->initialize($config);
 
 		if (!$this->upload->do_upload('thumbnail')) {
-			$error = array('error' => $this->upload->display_errors());
-
-			$this->load->view('plain', $error);
+			$data = array(
+				'error' => $this->upload->display_errors(),
+				'category' => $this->category,
+				'topic' => $this->topic,
+			);
+			$this->load->view('plain', $data);
 		} else {
 
 			$gbr = $this->upload->data();
 			$file_name = $gbr['file_name'];
 
-			$id = date('ymdhi');
+			$id = date('ymdhis');
 			$thumbnail = $file_name;
 			$date = $this->input->post('date');
 			$author = $this->input->post('author');
@@ -54,6 +58,9 @@ class Konten extends CI_Controller
 			$title = $this->input->post('title');
 			$description = $this->input->post('description');
 			$content = $this->input->post('content');
+
+			$this->category = $category;
+			$this->topic = $topic;
 
 			$Content = array(
 				'id' => $id,
@@ -68,7 +75,11 @@ class Konten extends CI_Controller
 			);
 
 			$this->M_konten->save($Content);
-			$data = array('upload_data' => $this->upload->data());
+			$data = array(
+				'upload_data' => $this->upload->data(),
+				'category' => $this->category,
+				'topic' => $this->topic,
+			);
 			$this->load->view('upload_success', $data);
 		}
 	}
@@ -77,5 +88,14 @@ class Konten extends CI_Controller
 	{
 		print_r($_POST);
 		print_r($this->upload->data());
+	}
+
+	public function view($id)
+	{
+		$data = array(
+			'data' => $this->M_konten->single($id),
+			'recent' => $this->M_konten->recent($id),
+		);
+		$this->load->view('single', $data);
 	}
 }

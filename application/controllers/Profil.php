@@ -8,7 +8,7 @@ class Profil extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'profil/index',
-			'topic' => 'PROFIL',
+			'section' => 'PROFIL',
 			'kategori' => 'profil',
 		);
 
@@ -20,7 +20,7 @@ class Profil extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'profil/sejarah',
-			'topic' => 'SEJARAH',
+			'section' => 'SEJARAH',
 			'kategori' => 'profil',
 		);
 
@@ -33,7 +33,7 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/visi',
 			'kategori' => 'profil',
-			'topic' => 'VISI MISI TUJUAN'
+			'section' => 'VISI MISI TUJUAN'
 		);
 
 		$this->load->view('wrapper', $data);
@@ -45,7 +45,7 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/program',
 			'kategori' => 'profil',
-			'topic' => 'PROGRAM STUDI'
+			'section' => 'PROGRAM STUDI'
 		);
 
 		$this->load->view('wrapper', $data);
@@ -57,7 +57,7 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/staf',
 			'kategori' => 'profil',
-			'topic' => 'STAF PENGAJAR'
+			'section' => 'STAF PENGAJAR'
 		);
 
 		$this->load->view('wrapper', $data);
@@ -69,7 +69,7 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/struktur',
 			'kategori' => 'profil',
-			'topic' => 'STRUKTUR KEPENGURUSAN'
+			'section' => 'STRUKTUR KEPENGURUSAN'
 		);
 
 		$this->load->view('wrapper', $data);

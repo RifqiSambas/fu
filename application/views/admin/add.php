@@ -1,3 +1,4 @@
+<?php if (!$category) redirect('admin') ?>
 <html lang="en">
 <!DOCTYPE html>
 
@@ -36,23 +37,33 @@
 				</div>
 				<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
 
-					<h3>Asset Konten</h3>
+					<h3>Aset Konten</h3>
 					<p align="justify">
-						Jika konten akan berisikan asset (gambar), upload terlebih dahulu file asset sebelum membuat konten, abaikan jika tidak mmenggunakan asset
+						Jika konten akan berisikan asset (gambar pada kolom content), upload terlebih dahulu file asset sebelum membuat konten, abaikan jika tidak mmenggunakan asset
 						<p>
 							<form action="<?= base_url('asset/simpan') ?>">
 								<div class="form-group">
 									<input type="file" class="asset" name="asset" id="asset">
 								</div>
 								<div class="form-group">
-									<button class="btn btn-primary" type="submit">Upload Asset</button>
+									<button class="btn btn-primary" type="submit">Upload Aset</button>
 								</div>
 							</form>
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
-					<h3>Buat Konten Baru</h3>
+					<h3>Konten Baru</h3>
+					<h5>Kategori : <?= $category ?> | Topik : <?= $topic ?></h5>
+					<br />
+					<div class="row">
+						<div class="col-md-6">
+						</div>
+						<div class="col-md-6">
+							<span>
+							</span>
+						</div>
+					</div>
 					<?php echo form_open_multipart('konten/simpan'); ?>
 					<div class="form-group">
 						<input type="text" name="title" class="form-control" placeholder="Title" required>
@@ -61,21 +72,19 @@
 						<input type="text" name="author" class="form-control" placeholder="Author" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="description" class="form-control" placeholder="Description" required>
-					</div>
-					<div class="form-group">
 						<input type="date" name="date" class="form-control">
 					</div>
+					<input type="hidden" name="category" value="<?= $category ?>" class="form-control">
+					<input type="hidden" name="topic" value="<?= $topic ?>" class="form-control">
 					<div class="form-group">
-						<input type="text" name="category" value="<?= $category ?>" class="form-control" disabled>
-					</div>
-					<div class="form-group">
-						<input type="text" name="topic" value="<?= $topic ?>" class="form-control" disabled>
-					</div>
-					<div class="form-group">
+						<label for="thumbnail">Thumbnail</label>
 						<input type="file" name="thumbnail" id="thumbnail">
 					</div>
 					<div class="form-group">
+						<textarea name="description" class="form-control" placeholder="Description" required></textarea>
+					</div>
+					<div class="form-group">
+						<label for="content">Content</label>
 						<textarea name="content" id="ckeditor" required></textarea>
 					</div>
 					<button type="submit" class="btn btn-success">PUBLISH</button>

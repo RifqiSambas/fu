@@ -4,8 +4,8 @@
 	<a class="mt-10 color-ash" href="">
 		<i class="mlr-10 ion-chevron-right"></i>
 		<b>
-			<?= $topic ?> FAKULTAS USHULUDDIN
+			<?= $section ?> FAKULTAS USHULUDDIN
 		</b>
 	</a>
-	<h1 class="mtb-20"><b><?= $topic ?></b></h1>
+	<h1 class="mtb-20"><b><?= $section ?></b></h1>
 </div>

@@ -28,7 +28,7 @@
 
 <ul class="pagination mb-30">
 	<?php for ($i = 1; $i <= ($jumlah / 4); $i++) { ?>
-		<?php if ($i == $at) { ?>
+		<?php if ($i == $part) { ?>
 			<li class='active'>
 				<a href='<?= base_url('arsip/' . $topic . '/' . $i) ?>'><?= $i ?></a>
 			</li>

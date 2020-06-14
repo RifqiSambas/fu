@@ -3,13 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Laboratorium extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'laboratorium/index',
-			'topic' => 'LABORATORIUM',
+			'section' => 'LABORATORIUM',
 			'kategori' => 'laboratorium',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -20,8 +28,10 @@ class Laboratorium extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'laboratorium/perpustakaan',
-			'topic' => 'PERPUSTAKAAN',
+			'section' => 'PERPUSTAKAAN',
 			'kategori' => 'laboratorium',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -32,8 +42,10 @@ class Laboratorium extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'laboratorium/judul',
-			'topic' => 'JUDUL SKRIPSI',
+			'section' => 'JUDUL SKRIPSI',
 			'kategori' => 'laboratorium',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -44,8 +56,10 @@ class Laboratorium extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'laboratorium/abstraksi',
-			'topic' => 'ABSTRAKSI SKRIPSI',
+			'section' => 'ABSTRAKSI SKRIPSI',
 			'kategori' => 'laboratorium',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);

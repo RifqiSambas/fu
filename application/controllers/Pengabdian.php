@@ -3,13 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pengabdian extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengabdian/index',
-			'topic' => 'PENGABDIAN',
+			'section' => 'PENGABDIAN',
 			'kategori' => 'pengabdian',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -20,8 +28,10 @@ class Pengabdian extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengabdian/desa',
-			'topic' => 'DESA BINAAN',
+			'section' => 'DESA BINAAN',
 			'kategori' => 'pengabdian',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -32,8 +42,11 @@ class Pengabdian extends CI_Controller
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'pengabdian/konseling',
-			'topic' => 'KONSELING',
+			'section' => 'KONSELING',
 			'kategori' => 'pengabdian',
+			'recent' => $this->M_konten->recent('berita'),
+
+
 		);
 
 		$this->load->view('wrapper', $data);

@@ -4,7 +4,7 @@
 
 <body>
 
-	<h3>Your file was successfully uploaded!</h3>
+	<h3>Konten telah berhasil dibuat</h3>
 
 	<ul>
 		<?php foreach ($upload_data as $item => $value) : ?>
@@ -12,7 +12,14 @@
 		<?php endforeach; ?>
 	</ul>
 
-	<p><?php echo anchor('konten', 'Upload Another File!'); ?></p>
+	<p>
+		<form action="<?= base_url('konten') ?>" method="post">
+			<input type="hidden" name="category" value="<?= $category ?>">
+			<input type="hidden" name="topic" value="<?= $topic ?>">
+			<input type="submit" value="tambah <?= $topic ?> lainnya">
+		</form>
+	</p>
+	<p><a href="<?= base_url('admin') ?>">kembali ke dashboard</a></p>
 
 </body>
 
