@@ -31,12 +31,12 @@
 				<!-- card-view -->
 
 				<div class="mb-30 p-30 card-view">
-					<?php $this->load->view('home/component/dekan') ?>
+					<?php $this->load->view('home/component/wadek') ?>
 				</div>
 				<!-- card-view -->
 
 				<div class="mb-30 p-30 card-view">
-					<?php $this->load->view('home/component/wadek') ?>
+					<?php $this->load->view('home/component/dosen') ?>
 				</div>
 				<!-- card-view -->
 				<div class="mb-30 p-30 card-view">

@@ -14,6 +14,16 @@ class Pages extends CI_Controller
 		$data = array(
 			'pages' => 'home/index',
 			'data' => $this->M_konten->content('berita'),
+			'berita' => $this->M_konten->content('berita'),
+			'dekan' => $this->M_konten->content('dekan'),
+			'wadek' => $this->M_konten->content('dekan'),
+			'dosen' => $this->M_konten->content('dekan'),
+			'alumni' => $this->M_konten->content('dekan'),
+			'mahasiswa' => $this->M_konten->content('dekan'),
+			'buku' => $this->M_konten->content('dekan'),
+			'akademik' => $this->M_konten->content('dekan'),
+			'penugumuman' => $this->M_konten->content('dekan'),
+			'agenda' => $this->M_konten->content('dekan'),
 		);
 
 		$this->load->view('wrapper', $data);

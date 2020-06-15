@@ -1,6 +1,6 @@
 <h4 class="p-title in">
 	<b>
-		<a href="#" align="right" class="text-right">
+		<a href="<?= base_url('publikasi/buku') ?>" align=" right" class="text-right">
 			BUKU
 	</b>
 	</a>

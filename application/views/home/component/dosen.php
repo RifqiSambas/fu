@@ -19,5 +19,5 @@
 </p>
 
 <ul class="font-10 text-center color-white list-block list-a-block list-a-ptb-10 list-li-mb-10 list-a-br-5 list-a-hvr-primary pt-20">
-	<li><a class="bg-primary" href="#">ARTIKEL DOSEN SELENGKAPNYA</a></li>
+	<li><a class="bg-primary" href="<?= base_url('arsip/dosen') ?>">ARTIKEL DOSEN SELENGKAPNYA</a></li>
 </ul>

@@ -12,7 +12,7 @@ class Hmj extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'common/content',
+			'pages' => 'common/main_content',
 			'content' => 'hmj/index',
 			'section' => 'HMJ',
 			'kategori' => 'hmj',

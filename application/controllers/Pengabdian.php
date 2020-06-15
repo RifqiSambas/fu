@@ -12,7 +12,7 @@ class Pengabdian extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'common/content',
+			'pages' => 'common/main_content',
 			'content' => 'pengabdian/index',
 			'section' => 'PENGABDIAN',
 			'kategori' => 'pengabdian',

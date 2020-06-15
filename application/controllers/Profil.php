@@ -12,7 +12,7 @@ class Profil extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'common/content',
+			'pages' => 'common/main_content',
 			'content' => 'profil/index',
 			'section' => 'PROFIL',
 			'kategori' => 'profil',

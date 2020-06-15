@@ -40,13 +40,6 @@
 					<h5>
 						<a href="#"><b><?= $menuitem['nama'] ?></b></a>
 					</h5>
-					<ul class="mtb-5 list-li-mr-20 color-blue">
-						<li>
-							<a href="">
-								<i class="mr-5 font-12 ion-edit"></i>
-							</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>

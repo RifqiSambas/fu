@@ -12,7 +12,7 @@ class Akademik extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'pages' => 'common/content',
+			'pages' => 'common/main_content',
 			'content' => 'akademik/index',
 			'section' => 'AKADEMIK',
 			'recent' => $this->M_konten->recent('berita'),
