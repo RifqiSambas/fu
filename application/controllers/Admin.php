@@ -254,4 +254,168 @@ class Admin extends CI_Controller
 
 		$this->load->view('admin/wrapper', $data);
 	}
+
+	public function dekan()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('dekan'),
+			'pages' => 'admin/list',
+			'title' => 'POJOK DEKAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function wadek()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('wadek'),
+			'pages' => 'admin/list',
+			'title' => 'POJOK WAKIL DEKAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function dosen()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('dosen'),
+			'pages' => 'admin/list',
+			'title' => 'ARTIKEL DOSEN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function alumni()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('alumni'),
+			'pages' => 'admin/list',
+			'title' => 'ARTIKEL ALUMNI',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+	public function mahasiswa()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('mahasiswa'),
+			'pages' => 'admin/list',
+			'title' => 'ARTIKEL MAHASISWA',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function buku()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('buku'),
+			'pages' => 'admin/list',
+			'title' => 'BUKU',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function jurnal()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('jurnal'),
+			'pages' => 'admin/list',
+			'title' => 'JURNAL',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function kliping()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('kliping'),
+			'pages' => 'admin/list',
+			'title' => 'KLIPING KORAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function desan()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('desan'),
+			'pages' => 'admin/list',
+			'title' => 'DESA BINAAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function konseling()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('konseling'),
+			'pages' => 'admin/list',
+			'title' => 'KONSELING',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function perspustakaan()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('perspustakaan'),
+			'pages' => 'admin/list',
+			'title' => 'PERPUSTAKAAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function judul()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('judul'),
+			'pages' => 'admin/list',
+			'title' => 'JUDUL SKRIPSI',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function abstraksi()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('abstraksi'),
+			'pages' => 'admin/list',
+			'title' => 'ABSTRAKSI SKRIPSI',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function beasiswa()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('beasiswa'),
+			'pages' => 'admin/list',
+			'title' => 'BEASISWA',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function lowongan()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('lowongan'),
+			'pages' => 'admin/list',
+			'title' => '',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
 }

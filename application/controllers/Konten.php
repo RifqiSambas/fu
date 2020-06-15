@@ -40,7 +40,6 @@ class Konten extends CI_Controller
 			);
 			$this->load->view('plain', $data);
 		} else {
-
 			$gbr = $this->upload->data();
 			$file_name = $gbr['file_name'];
 
@@ -79,11 +78,6 @@ class Konten extends CI_Controller
 		}
 	}
 
-	public function cek()
-	{
-		print_r($_POST);
-		print_r($this->upload->data());
-	}
 
 	public function view($id)
 	{
@@ -102,5 +96,84 @@ class Konten extends CI_Controller
 			'recent' => $this->M_konten->recent($this->uri->segment(3)),
 		);
 		$this->load->view('single', $data);
+	}
+
+	public function delete($id = false)
+	{
+		if ($id == false) {
+			redirect('admin');
+		}
+		$data = array(
+			'data' => $this->M_konten->get_topic($id),
+		);
+		if ($this->M_konten->delete($id)) {
+			$this->load->view('delete_success', $data);
+		}
+	}
+
+	public function edit($id)
+	{
+		if ($id == false) {
+			redirect('admin');
+		}
+		$data = array(
+			'error' => '',
+			'data' => $this->M_konten->single($id),
+		);
+		$this->load->view('admin/edit', $data);
+	}
+
+
+	public function update()
+	{
+		$config['upload_path']          = 'assets/uploads/';
+		$config['allowed_types']        = 'gif|jpg|jpeg|png';
+		$config['max_size']             = 10000;
+		$config['encrypt_name'] 				= TRUE; //nama yang terupload nantinya
+
+		$this->upload->initialize($config);
+
+		if (!$this->upload->do_upload('thumbnail')) {
+			$data = array(
+				'error' => $this->upload->display_errors(),
+				'category' => $this->category,
+				'topic' => $this->topic,
+			);
+			$this->load->view('plain', $data);
+		} else {
+			$gbr = $this->upload->data();
+			$file_name = $gbr['file_name'];
+
+			$id = $this->input->post('id');
+			$thumbnail = $file_name;
+			$date = $this->input->post('date');
+			$author = $this->input->post('author');
+			$topic = $this->input->post('topic');
+			$category = $this->input->post('category');
+			$title = $this->input->post('title');
+			$description = $this->input->post('description');
+			$content = $this->input->post('content');
+
+			$this->category = $category;
+			$this->topic = $topic;
+
+			$Content = array(
+				'id' => $id,
+				'date' => $date,
+				'author' => $author,
+				'topic' => $topic,
+				'category' => $category,
+				'title' => $title,
+				'thumbnail' => $thumbnail,
+				'description' => $description,
+				'content' => $content,
+			);
+
+			$this->M_konten->update($id, $Content);
+			$data = array(
+				'data' => $this->M_konten->get_topic($id),
+			);
+			$this->load->view('update_success', $data);
+		}
 	}
 }

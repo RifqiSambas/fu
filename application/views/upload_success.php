@@ -18,6 +18,7 @@
 		</form>
 	</p>
 	<p><a href="<?= base_url('admin') ?>">kembali ke dashboard</a></p>
+	<p><a href="<?= base_url('admin/' . $topic) ?>">kembali ke daftar <?= $topic ?></a></p>
 
 </body>
 

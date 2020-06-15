@@ -18,7 +18,9 @@
 							</a>
 						</td>
 						<td><?= $data->author ?></td>
-						<td><a class="text-primary" href="">EDIT</a> | <a class="text-danger" href="">DELETE</a></td>
+						<td>
+							<a class="text-primary" href="<?= base_url('konten/edit/' . $data->id) ?>">EDIT</a> |
+							<a class="text-danger" href="<?= base_url('konten/delete/' . $data->id) ?>">DELETE</a></td>
 					</tr>
 				<?php } ?>
 			</tbody>

@@ -6,6 +6,22 @@ class M_konten extends CI_Model
 		return $this->db->insert('konten', $content);
 	}
 
+	public function delete($id)
+	{
+		$this->db->where('id', $id);
+		if ($this->db->delete('konten')) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function update($id, $content)
+	{
+		$this->db->where('id', $id);
+		return $this->db->replace('konten', $content);
+	}
+
 	public function content($column, $offset = 0)
 	{
 		$this->db->order_by('date', 'desc');
@@ -48,5 +64,12 @@ class M_konten extends CI_Model
 		$this->db->where('topic', $column);
 		$this->db->limit($limit);
 		return $this->db->get('konten')->result();
+	}
+
+	public function get_topic($id)
+	{
+		$this->db->select('topic');
+		$this->db->where('id', $id);
+		return $this->db->get('konten')->row();
 	}
 }
