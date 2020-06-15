@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Profil extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('M_konten');
+	}
+
 	public function index()
 	{
 		$data = array(
@@ -10,6 +16,7 @@ class Profil extends CI_Controller
 			'content' => 'profil/index',
 			'section' => 'PROFIL',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
 		);
 
 		$this->load->view('wrapper', $data);
@@ -22,6 +29,8 @@ class Profil extends CI_Controller
 			'content' => 'profil/sejarah',
 			'section' => 'SEJARAH',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
 		);
 
 		$this->load->view('wrapper', $data);
@@ -33,6 +42,8 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/visi',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
 			'section' => 'VISI MISI TUJUAN'
 		);
 
@@ -45,6 +56,8 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/program',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
 			'section' => 'PROGRAM STUDI'
 		);
 
@@ -57,6 +70,8 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/staf',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
 			'section' => 'STAF PENGAJAR'
 		);
 
@@ -69,10 +84,11 @@ class Profil extends CI_Controller
 			'pages' => 'common/content',
 			'content' => 'profil/struktur',
 			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
 			'section' => 'STRUKTUR KEPENGURUSAN'
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 }
-
