@@ -239,6 +239,15 @@ class Admin extends CI_Controller
 						'list' => true,
 					],
 				],
+				'lainnya' => [
+					[
+						'nama' => 'Sambutan Dekan',
+						'url' => 'sambutan',
+						'icon' => 'edit',
+						'aksi' => 'Edit',
+						'list' => false
+					]
+				]
 			],
 		);
 		$this->load->view('admin/wrapper', $data);

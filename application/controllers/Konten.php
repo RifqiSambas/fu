@@ -15,6 +15,9 @@ class Konten extends CI_Controller
 
 	public function index()
 	{
+		if ($this->uri->segement(3) !== null) {
+			redirect('admin');
+		}
 		$data = array(
 			'error' => '',
 			'topic' => $_POST['topic'],

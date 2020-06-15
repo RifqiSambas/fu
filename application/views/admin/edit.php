@@ -26,33 +26,12 @@
 	<?php echo $error; ?>
 	<div class="container-fluid mt-30">
 		<div class="row justify-content-md-center">
-			<div class="col-md-4">
-				<div>
-					<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
-						<h2><b><a href="<?= base_url('admin') ?>">ADMIN DASHBOARD</a></b></h2>
-					</div>
+			<div class="col-md-12">
+				<div class="mb-20 p-30 ptb-sm-25 plr-sm-15 card-view">
+					<h2><b><a href="<?= base_url('admin') ?>">ADMIN DASHBOARD</a></b></h2>
 				</div>
 				<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
-
-					<h3>Aset Konten</h3>
-					<p align="justify">
-						Jika konten akan berisikan asset (gambar pada kolom content), upload terlebih dahulu file asset sebelum membuat konten, abaikan jika tidak mmenggunakan asset
-					</p>
-					<?php echo form_open_multipart('konten/asset'); ?>
-					<div class="form-group">
-						<input type="hidden" name="category" id="category" value="<?= $data->category ?>">
-						<input type="hidden" name="topic" id="topic" value="<?= $data->topic ?>">
-						<input type="file" name="asset" id="asset">
-					</div>
-					<div class="form-group">
-						<button class="btn btn-primary" type="submit">Upload Aset</button>
-					</div>
-					</form>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
-					<h3>Konten Baru</h3>
+					<h3>Edit Konten</h3>
 					<h5>Kategori : <?= $data->category ?> | Topik : <?= $data->topic ?></h5>
 					<br />
 					<div class="row">

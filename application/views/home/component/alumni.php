@@ -10,7 +10,6 @@
 				<a href="<?= base_url('konten/detail/' . $alumni->topic . '/' . $alumni->id) ?>">
 					<?= $alumni->title ?>
 				</a>
-				<a href="<?= base_url($alumni->category . '/' . $alumni->topic . '/') ?>">
 			</h6>
 			<h6 class="color-ash">
 				<?= $alumni->author ?>
@@ -20,5 +19,5 @@
 	</div>
 <?php } ?>
 <ul class="font-10 text-center color-white list-block list-a-block list-a-ptb-10 list-li-mb-10 list-a-br-5 list-a-hvr-primary pt-20">
-	<li><a class="bg-primary" href="<?= base_url('arsip/alumni') ?>">ARTIKEL ALUMNI SELENGKAPNYA</a></li>
+	<li><a class="bg-primary" href="<?= base_url('arsip/alumni') ?>">ARTIKEL MAHASISWA SELENGKAPNYA</a></li>
 </ul>
