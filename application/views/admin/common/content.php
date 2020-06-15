@@ -5,7 +5,7 @@
 				<div class="col-md-12 col-lg-12">
 					<?php $this->load->view('admin/common/breadcrumb') ?>
 				</div>
-				<?php $this->load->view('admin/dashboard') ?>
+				<?php $this->load->view($pages) ?>
 			</div>
 		</div>
 	</section>

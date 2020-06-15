@@ -21,6 +21,14 @@
 										</button>
 									</form>
 								</li>
+								<?php if ($menuitem['list']) { ?>
+									<li>
+										<a href="<?= base_url('admin/' . $menuitem['url']) ?>">
+											Daftar
+											<?= $menuitem['nama'] ?>
+										</a>
+									</li>
+								<?php } ?>
 							</ul>
 						</div>
 					<?php } ?>

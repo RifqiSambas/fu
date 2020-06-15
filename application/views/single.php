@@ -1,31 +1,34 @@
-<?php print_r($data);
-?>
 <?php $this->load->view('common/start') ?>
 <?php $this->load->view('common/header') ?>
 <section class="ptb-30">
 	<div class="container">
 		<div class="row">
-			<?php foreach ($data as $data) { ?>
-				<div class="col-md-12 col-lg-8">
-					<div>
-						<p><?= $data->id ?></p>
-						<p><?= $data->title ?></p>
-						<p><?= $data->author ?></p>
-						<p><?= $data->date ?></p>
-						<p><?= $data->description ?></p>
-						<p><?= $data->category ?></p>
-						<p><?= $data->topic ?></p>
-						<img src="<?= base_url('assets/uploads/' . $data->thumbnail) ?>" alt="<?= $data->thumbnail ?>" />
-						<p><?= $data->content ?></p>
-					</div>
-					<br />
-				<?php } ?>
+			<div class="col-md-12 col-lg-8">
+				<div class="ptb-0">
+					<a class="mt-10" href="<?= base_url() ?>"><i class="mr-5 ion-ios-home"></i><b>BERANDA</b></a>
+					<a class="mt-10" href="<?= base_url($data->category) ?>"><i class="mlr-10 ion-chevron-right"></i><b><?= strtoupper($data->category) ?></b></a>
+					<a class="mt-10" href="<?= base_url($data->category . '/' . $data->topic) ?>"><i class="mlr-10 ion-chevron-right"></i><b><?= strtoupper($data->topic) ?></b></a>
+					<h1 class="mtb-20"><b><?= $data->title ?></b></h1>
+					<ul class="list-li-mr-10 color-lite-black">
+						<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
+						<li><i class="mr-5 font-12 ion-android-person"></i>John Dowson</li>
+						<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15</li>
+						<li><i class="mr-5 font-12 ion-eye"></i>105</li>
+					</ul>
 				</div>
-				<div class="col-md-12 col-lg-4">
-					<div class="p-30 mb-30 card-view">
-						<?php $this->load->view('common/recent') ?>
+				<section class="ptb-30">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-lg-8">
+								<div>
+									<p><?= $data->id ?></p>
+								</div>
+								<br />
+							</div>
+						</div>
 					</div>
-				</div>
+				</section>
+			</div>
 		</div>
 	</div>
 </section>

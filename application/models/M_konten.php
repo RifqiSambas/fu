@@ -14,6 +14,14 @@ class M_konten extends CI_Model
 		return $this->db->get('konten')->result();
 	}
 
+	public function list($column)
+	{
+
+		$this->db->order_by('date', 'desc');
+		$this->db->where('topic', $column);
+		return $this->db->get('konten')->result();
+	}
+
 	public function single($id)
 	{
 		$this->db->where('id', $id);

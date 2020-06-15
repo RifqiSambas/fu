@@ -1,4 +1,3 @@
-
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -95,33 +94,12 @@ class Konten extends CI_Controller
 		$this->load->view('single', $data);
 	}
 
-	public function asset()
+	public function detail()
 	{
-		$config['allowed_types']        = 'gif|jpg|jpeg|png';
-		$config['upload_path']          = 'assets/uploads/';
-		$config['max_size']             = 10000;
-		$config['encrypt_name'] 				= TRUE; //nama yang terupload nantinya
-
-		$this->upload->initialize($config);
-		$this->category = $this->input->post('category');
-		$this->topic = $this->input->post('topic');
-
-		if (!$this->upload->do_upload('asset')) {
-			$data = array(
-				'error' => $this->upload->display_errors(),
-				'category' => $this->category,
-				'topic' => $this->topic,
-			);
-			$this->load->view('plain', $data);
-		} else {
-
-			$data = array(
-				'upload_data' => $this->upload->data(),
-				'category' => $this->category,
-				'topic' => $this->topic,
-				'aset' => true,
-			);
-			$this->load->view('upload_success', $data);
-		}
+		$id = $this->uri->segment(4);
+		$data = array(
+			'data' => $this->M_konten->single($id),
+		);
+		$this->load->view('single', $data);
 	}
 }

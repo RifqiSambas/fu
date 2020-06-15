@@ -10,7 +10,7 @@
 		</div><!-- left-area -->
 		<div class="s-right ptb-30 pt-sm-20 pb-xs-5 plr-30 plr-xs-0">
 			<h4>
-				<a href="<?= base_url('konten/' . $data->id) ?>">
+				<a href="<?= base_url('konten/detail/' . $data->topic . '/' . $data->id) ?>">
 					<?= $data->title ?>
 				</a>
 			</h4>
