@@ -8,7 +8,9 @@
 		<div class="s-right">
 			<h6>
 				<b>
-					<?= $dekan->title ?>
+					<a href="<?= base_url('konten/detail/' . $dekan->topic . '/' . $dekan->id) ?>">
+						<?= $dekan->title ?>
+					</a>
 				</b>
 			</h6>
 			<h6 class="color-ash">

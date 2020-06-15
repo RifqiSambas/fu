@@ -7,11 +7,10 @@
 
 		<div class="s-right">
 			<h6>
-				<a href="<?= base_url($alumni->category . '/' . $alumni->topic . '/') ?>">
-					<b>
-						<?= $alumni->title ?>
-					</b>
+				<a href="<?= base_url('konten/detail/' . $alumni->topic . '/' . $alumni->id) ?>">
+					<?= $alumni->title ?>
 				</a>
+				<a href="<?= base_url($alumni->category . '/' . $alumni->topic . '/') ?>">
 			</h6>
 			<h6 class="color-ash">
 				<?= $alumni->author ?>

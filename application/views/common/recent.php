@@ -14,7 +14,7 @@
 		<!-- s-left -->
 		<div class="s-right">
 			<h6>
-				<a href="<?= base_url('/konten/view' . $recent->id) ?>">
+				<a href="<?= base_url('/konten/detail/' . $recent->topic . '/' . $recent->id) ?>">
 					<b><?= $recent->title ?></b></a>
 			</h6>
 			<ul class="mtb-5 list-li-mr-20 color-lite-black">

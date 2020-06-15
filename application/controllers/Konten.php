@@ -99,6 +99,7 @@ class Konten extends CI_Controller
 		$id = $this->uri->segment(4);
 		$data = array(
 			'data' => $this->M_konten->single($id),
+			'recent' => $this->M_konten->recent($this->uri->segment(3)),
 		);
 		$this->load->view('single', $data);
 	}

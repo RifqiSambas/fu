@@ -7,9 +7,9 @@
 
 		<div class="s-right">
 			<h6>
-				<b>
+				<a href="<?= base_url('konten/detail/' . $mahasiswa->topic . '/' . $mahasiswa->id) ?>">
 					<?= $mahasiswa->title ?>
-				</b>
+				</a>
 			</h6>
 			<h6 class="color-ash">
 				<?= $mahasiswa->author ?>
