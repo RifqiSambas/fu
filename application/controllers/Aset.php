@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Konten extends CI_Controller
+class Asset extends CI_Controller
 {
 	public function __construct()
 	{

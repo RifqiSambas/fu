@@ -3,8 +3,11 @@
 </head>
 
 <body>
-
-	<h3>Konten telah berhasil dibuat</h3>
+	<?php if ($aset) { ?>
+		<h3>Berhasil meunggah asset ke server</h3>
+	<?php } else { ?>
+		<h3>Konten telah berhasil dibuat</h3>
+	<?php } ?>
 
 	<ul>
 		<?php foreach ($upload_data as $item => $value) : ?>

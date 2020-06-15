@@ -46,10 +46,15 @@
 					<div class="pr-10 pr-sm-0">
 						<h5 class="f-title"><b>HUBUNGI KAMI</b></h5>
 
-						<p>Fakultas Ushuluddin
+						<p>
+							Fakultas Ushuluddin
 							UIN Sunan Gunung DJati Bandung
 							Cipadung, Kec. Cibiru,
-							Kota Bandung, Jawa Barat 40614</p>
+							Kota Bandung, Jawa Barat 40614
+						</p>
+						<p>
+							Alamat : Jl. AH Nasution No. 105 Telp. 022-7800525 / Fax.022-7803936, email: ushuluddin@uinsgd.ac.id
+						</p>
 					</div>
 					<!--pr-10 -->
 				</div>

@@ -24,7 +24,7 @@ if(isset($_SESSION['status']) == 'loggedin'){
 
 $_CONFIG = array(
 
-    'disabled' => $status,  
+    'disabled' => true,  
     'denyZipDownload' => false,
     'denyUpdateCheck' => false,
     'denyExtensionRename' => false,
@@ -107,4 +107,3 @@ $_CONFIG = array(
     //'_sessionPath' => "/my/path",
 );
 
-?>

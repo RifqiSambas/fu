@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="col-sm-6">
-			<h4 class="mt-30">
+			<h4 class="">
 				<a href="#">
 					<b>
 						<?= $data->title ?>
@@ -28,8 +28,7 @@
 					<?= $data->author ?>
 				</li>
 			</ul>
-			<p>
-
+			<p class="mb-50">
 				<?= $data->description ?>
 			</p>
 		</div>

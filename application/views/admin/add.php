@@ -40,15 +40,17 @@
 					<h3>Aset Konten</h3>
 					<p align="justify">
 						Jika konten akan berisikan asset (gambar pada kolom content), upload terlebih dahulu file asset sebelum membuat konten, abaikan jika tidak mmenggunakan asset
-						<p>
-							<form action="<?= base_url('asset/simpan') ?>">
-								<div class="form-group">
-									<input type="file" class="asset" name="asset" id="asset">
-								</div>
-								<div class="form-group">
-									<button class="btn btn-primary" type="submit">Upload Aset</button>
-								</div>
-							</form>
+					</p>
+					<?php echo form_open_multipart('konten/asset'); ?>
+					<div class="form-group">
+						<input type="hidden" name="category" id="category" value="<?= $category ?>">
+						<input type="hidden" name="topic" id="topic" value="<?= $topic ?>">
+						<input type="file" name="asset" id="asset">
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary" type="submit">Upload Aset</button>
+					</div>
+					</form>
 				</div>
 			</div>
 			<div class="col-md-8">

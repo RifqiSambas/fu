@@ -38,7 +38,6 @@
 			<div class="col-sm-12 col-lg-12">
 				<div class="brdr-l-grey-2 pl-20 mb-30">
 					<h5>
-						<a href="#"><b><?= $menuitem['nama'] ?></b></a>
 					</h5>
 				</div>
 			</div>

@@ -1,22 +1,25 @@
 <h4 class="p-title"><b>ARTIKEL ALUMNI</b></h4>
-<h5 class="mt-2">
-	<a href="#">
-		<b>LAGI, JURUS MAUT NUR KHALIM MEMAKAN KORBAN</b>
-	</a>
-</h5>
-<p>
-	Nur Khalim memang pantas jadi teladan. Prosesi damai antara dia dengan muridnya menuai kekaguman juga
-	sanjungan.
-</p>
-<h5 class="mt-4">
-	<a href="#">
-		<b>IN MEMORIAM DR.AFGHANI SYAHURI MA.</b>
-	</a>
-</h5>
-<p>
-	Kabar yang datang adalah kematian. Seorang teman juga sahabat harus "pulang" duluan. Ia menjemput taqdir yang niscaya. Menemui keabadian.
-</p>
+<?php foreach ($alumni as $alumni) { ?>
+	<div class="sided-90x mb-20">
+		<div class="s-left br-3 oflow-hidden">
+			<img src="<?= base_url('assets/uploads/' . $alumni->thumbnail) ?>" alt="<?= $alumni->title ?>">
+		</div>
 
+		<div class="s-right">
+			<h6>
+				<a href="<?= base_url($alumni->category . '/' . $alumni->topic . '/') ?>">
+					<b>
+						<?= $alumni->title ?>
+					</b>
+				</a>
+			</h6>
+			<h6 class="color-ash">
+				<?= $alumni->author ?>
+			</h6>
+		</div>
+		<!-- s-left -->
+	</div>
+<?php } ?>
 <ul class="font-10 text-center color-white list-block list-a-block list-a-ptb-10 list-li-mb-10 list-a-br-5 list-a-hvr-primary pt-20">
-	<li><a class="bg-primary" href="<?= base_url('arsip/alumni') ?>"> ARTIKEL ALUMNI SELENGKAPNYA</a> </li>
+	<li><a class="bg-primary" href="<?= base_url('arsip/alumni') ?>">ARTIKEL ALUMNI SELENGKAPNYA</a></li>
 </ul>

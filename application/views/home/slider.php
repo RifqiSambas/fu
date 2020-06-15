@@ -17,13 +17,6 @@
 					</h3>
 					<ul class="list-li-mr-10 color-grey">
 						<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
-						<li>
-							<i class="mr-5 font-12 ion-android-person"></i>John Dowson
-						</li>
-						<li>
-							<i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15
-						</li>
-						<li><i class="mr-5 font-12 ion-eye"></i>105</li>
 					</ul>
 				</div>
 				<!--abs-blr -->
@@ -41,13 +34,6 @@
 						</h3>
 						<ul class="list-li-mr-10 color-grey">
 							<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
-							<li>
-								<i class="mr-5 font-12 ion-android-person"></i>John Dowson
-							</li>
-							<li>
-								<i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15
-							</li>
-							<li><i class="mr-5 font-12 ion-eye"></i>105</li>
 						</ul>
 					</div>
 					<!--abs-blr -->
@@ -70,12 +56,6 @@
 						<ul class="list-li-mr-10 color-ash">
 							<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
 							<li>
-								<i class="mr-5 font-12 ion-android-person"></i>John Dowson
-							</li>
-							<li>
-								<i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15
-							</li>
-							<li><i class="mr-5 font-12 ion-eye"></i>105</li>
 						</ul>
 					</div>
 					<!--abs-blr -->
@@ -95,13 +75,6 @@
 						</h3>
 						<ul class="list-li-mr-20 color-grey">
 							<li><i class="mr-5 font-12 ion-clock"></i>Jan 25, 2018</li>
-							<li>
-								<i class="mr-5 font-12 ion-android-person"></i>John Dowson
-							</li>
-							<li>
-								<i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>15
-							</li>
-							<li><i class="mr-5 font-12 ion-eye"></i>105</li>
 						</ul>
 					</div>
 					<!--abs-blr -->

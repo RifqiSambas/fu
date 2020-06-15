@@ -6,15 +6,15 @@
 <section class="">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-lg-8">
+			<div class="col-sm-12 col-lg-12">
 				<?php $this->load->view('home/component/sambutan') ?>
-			</div>
-			<div class="col-sm-12 col-lg-4">
-				<?php $this->load->view('home/component/layanan') ?>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 col-lg-8">
+				<div class="p-30 card-view mb-30">
+					<?php $this->load->view('home/component/profil') ?>
+				</div>
 				<div class="p-30 card-view mb-30">
 					<?php $this->load->view('home/component/akademik') ?>
 				</div>
@@ -28,26 +28,21 @@
 				<div class="mb-30 mt-md-30 p-30 card-view">
 					<?php $this->load->view('home/component/dekan') ?>
 				</div>
-				<!-- card-view -->
-
 				<div class="mb-30 p-30 card-view">
 					<?php $this->load->view('home/component/wadek') ?>
 				</div>
-				<!-- card-view -->
-
 				<div class="mb-30 p-30 card-view">
 					<?php $this->load->view('home/component/dosen') ?>
 				</div>
-				<!-- card-view -->
 				<div class="mb-30 p-30 card-view">
 					<?php $this->load->view('home/component/alumni') ?>
 				</div>
+				<div class="mb-30 p-30 card-view">
+					<?php $this->load->view('home/component/mahasiswa') ?>
+				</div>
 			</div>
-			<!-- col-sm-4 -->
 		</div>
-		<!-- row -->
 	</div>
-	<!-- container -->
 </section>
 <style>
 	.buku img {

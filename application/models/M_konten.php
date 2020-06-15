@@ -20,10 +20,11 @@ class M_konten extends CI_Model
 		return $this->db->get('konten')->row();
 	}
 
-	public function recent($column)
+	public function recent($column, $limit = 7)
 	{
 		$this->db->where('topic !=', $column);
 		$this->db->order_by('id', 'RANDOM');
+		$this->db->limit($limit);
 		return $this->db->get('konten')->result();
 	}
 
@@ -31,5 +32,13 @@ class M_konten extends CI_Model
 	{
 		$this->db->where('topic', $column);
 		return $this->db->count_all_results('konten');
+	}
+
+	public function pages($column, $limit = 2)
+	{
+		$this->db->order_by('date', 'desc');
+		$this->db->where('topic', $column);
+		$this->db->limit($limit);
+		return $this->db->get('konten')->result();
 	}
 }

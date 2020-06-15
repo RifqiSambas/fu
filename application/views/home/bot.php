@@ -31,8 +31,9 @@
 
 			<div class="col-md-12 col-lg-4">
 
+
 				<div class="mb-30 p-30 card-view">
-					<?php $this->load->view('home/component/mahasiswa') ?>
+					<?php $this->load->view('home/component/layanan') ?>
 				</div>
 			</div>
 			<!-- col-sm-4 -->

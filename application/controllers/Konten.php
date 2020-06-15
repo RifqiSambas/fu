@@ -24,10 +24,6 @@ class Konten extends CI_Controller
 		$this->load->view('admin/add', $data);
 	}
 
-	public function trans()
-	{
-	}
-
 	public function simpan()
 	{
 		$config['upload_path']          = 'assets/uploads/';
@@ -97,5 +93,35 @@ class Konten extends CI_Controller
 			'recent' => $this->M_konten->recent($id),
 		);
 		$this->load->view('single', $data);
+	}
+
+	public function asset()
+	{
+		$config['allowed_types']        = 'gif|jpg|jpeg|png';
+		$config['upload_path']          = 'assets/uploads/';
+		$config['max_size']             = 10000;
+		$config['encrypt_name'] 				= TRUE; //nama yang terupload nantinya
+
+		$this->upload->initialize($config);
+		$this->category = $this->input->post('category');
+		$this->topic = $this->input->post('topic');
+
+		if (!$this->upload->do_upload('asset')) {
+			$data = array(
+				'error' => $this->upload->display_errors(),
+				'category' => $this->category,
+				'topic' => $this->topic,
+			);
+			$this->load->view('plain', $data);
+		} else {
+
+			$data = array(
+				'upload_data' => $this->upload->data(),
+				'category' => $this->category,
+				'topic' => $this->topic,
+				'aset' => true,
+			);
+			$this->load->view('upload_success', $data);
+		}
 	}
 }

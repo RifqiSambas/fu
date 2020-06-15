@@ -13,52 +13,73 @@ class Publikasi extends CI_Controller
 		$data = array(
 			'pages' => 'common/main_content',
 			'content' => 'publikasi/index',
-			'section' => 'PUBLIKASi',
+			'section' => 'PUBLIKASI',
 			'kategori' => 'publikasi',
 			'recent' => $this->M_konten->recent('berita'),
-
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function buku()
+	public function buku($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'publikasi/buku',
+			'content' => 'arsip/arsip',
+			'kategori' => 'arsip',
+			'topic' => 'buku',
 			'section' => 'BUKU',
-			'kategori' => 'publikasi',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'data' => $this->M_konten->content('buku', $at),
+			'recent' => $this->M_konten->recent('buku'),
+			'jumlah' => $this->M_konten->part('buku'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function jurnal()
+	public function jurnal($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'publikasi/jurnal',
 			'section' => 'JURNAL',
 			'kategori' => 'publikasi',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'recent' => $this->M_konten->recent('jurnal'),
+			'data' => $this->M_konten->content('jurnal', $at),
+			'jumlah' => $this->M_konten->part('jurnal'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function kliping()
+	public function kliping($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'publikasi/kliping',
 			'section' => 'KLIPING KORAN',
 			'kategori' => 'publikasi',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'recent' => $this->M_konten->recent('kliping'),
+			'data' => $this->M_konten->content('kliping', $at),
+			'jumlah' => $this->M_konten->part('kliping'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);

@@ -1,3 +1,8 @@
+<style>
+	p {
+		text-align: justify
+	}
+</style>
 <?php foreach ($data as $data) { ?>
 	<div id="<?= $data->id ?>" class="mb-30 sided-250x s-lg-height card-view">
 		<div class="s-left">
