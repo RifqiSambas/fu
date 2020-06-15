@@ -23,43 +23,67 @@ class Pengumuman extends CI_Controller
 		$this->load->view('wrapper', $data);
 	}
 
-	public function beasiswa()
+	public function beasiswa($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
+			'kategori' => 'pengumuman',
+			'topic' => 'beasiswa',
 			'section' => 'BEASISWA',
-			'kategori' => 'pengumuman',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'data' => $this->M_konten->content('beasiswa', $at),
+			'recent' => $this->M_konten->recent('beasiswa'),
+			'jumlah' => $this->M_konten->part('beasiswa'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function kegiatan()
+	public function kegiatan($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
-			'section' => 'KEGIATAN KAMI',
 			'kategori' => 'pengumuman',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'topic' => 'kegiatan',
+			'section' => 'KEGIATAN',
+			'data' => $this->M_konten->content('kegiatan', $at),
+			'recent' => $this->M_konten->recent('kegiatan'),
+			'jumlah' => $this->M_konten->part('kegiatan'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function lowongan()
+	public function lowongan($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
+			'kategori' => 'pengumuman',
+			'topic' => 'lowongan',
 			'section' => 'LOWONGAN KERJA',
-			'kategori' => 'pengumuman',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'data' => $this->M_konten->content('lowongan', $at),
+			'recent' => $this->M_konten->recent('lowongan'),
+			'jumlah' => $this->M_konten->part('lowongan'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);

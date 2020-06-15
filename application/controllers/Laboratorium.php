@@ -16,50 +16,72 @@ class Laboratorium extends CI_Controller
 			'content' => 'laboratorium/index',
 			'section' => 'LABORATORIUM',
 			'kategori' => 'laboratorium',
-			'recent' => $this->M_konten->recent('berita'),
-
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function perpustakaan()
+	public function perpustakaan($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
+			'kategori' => 'laboratorium',
+			'topic' => 'perpustakaan',
 			'section' => 'PERPUSTAKAAN',
-			'kategori' => 'laboratorium',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'data' => $this->M_konten->content('perpustakaan', $at),
+			'recent' => $this->M_konten->recent('perpustakaan'),
+			'jumlah' => $this->M_konten->part('perpustakaan'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function judul()
+	public function judul($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
+			'kategori' => 'laboratorium',
+			'topic' => 'judul',
 			'section' => 'JUDUL SKRIPSI',
-			'kategori' => 'laboratorium',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'data' => $this->M_konten->content('judul', $at),
+			'recent' => $this->M_konten->recent('judul'),
+			'jumlah' => $this->M_konten->part('judul'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function abstraksi()
+	public function abstraksi($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
-			'section' => 'ABSTRAKSI SKRIPSI',
 			'kategori' => 'laboratorium',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'topic' => 'abstraksi',
+			'section' => 'ABSTRAKSI SKRIPSI',
+			'data' => $this->M_konten->content('abstraksi', $at),
+			'recent' => $this->M_konten->recent('abstraksi'),
+			'jumlah' => $this->M_konten->part('abstraksi'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);

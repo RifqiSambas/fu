@@ -35,14 +35,23 @@ class Akademik extends CI_Controller
 		$this->load->view('wrapper', $data);
 	}
 
-	public function dokumen()
+	public function dokumen($at = 1)
 	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
 		$data = array(
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'akademik',
+			'topic' => 'dokumen',
 			'section' => 'DOKUMEN',
-			'recent' => $this->M_konten->recent('berita'),
+			'data' => $this->M_konten->content('dokumen', $at),
+			'recent' => $this->M_konten->recent('dokumen'),
+			'jumlah' => $this->M_konten->part('dokumen'),
+			'at' => $at,
+			'part' => $part,
 		);
 
 		$this->load->view('wrapper', $data);
