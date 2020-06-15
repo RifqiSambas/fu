@@ -364,10 +364,10 @@ class Admin extends CI_Controller
 		$this->load->view('admin/wrapper', $data);
 	}
 
-	public function perspustakaan()
+	public function perpustakaan()
 	{
 		$data = array(
-			'data' => $this->M_konten->list('perspustakaan'),
+			'data' => $this->M_konten->list('perpustakaan'),
 			'pages' => 'admin/list',
 			'title' => 'PERPUSTAKAAN',
 		);
