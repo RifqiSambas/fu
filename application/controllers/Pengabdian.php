@@ -13,7 +13,7 @@ class Pengabdian extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'pengabdian/index',
+			'content' => 'list',
 			'section' => 'PENGABDIAN',
 			'kategori' => 'pengabdian',
 			'recent' => $this->M_konten->recent('berita'),
@@ -27,7 +27,7 @@ class Pengabdian extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'pengabdian/desa',
+			'content' => 'list',
 			'section' => 'DESA BINAAN',
 			'kategori' => 'pengabdian',
 			'recent' => $this->M_konten->recent('berita'),
@@ -41,7 +41,7 @@ class Pengabdian extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'pengabdian/konseling',
+			'content' => 'list',
 			'section' => 'KONSELING',
 			'kategori' => 'pengabdian',
 			'recent' => $this->M_konten->recent('berita'),

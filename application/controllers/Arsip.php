@@ -14,7 +14,7 @@ class Arsip extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'arsip/index',
+			'content' => 'index',
 			'section' => 'ARSIP',
 			'kategori' => 'arsip',
 		);
@@ -30,7 +30,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'kategori' => 'arsip',
 			'topic' => 'berita',
 			'section' => 'BERITA',
@@ -52,7 +52,8 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
+			'kategori' => 'arsip',
 			'kategori' => 'arsip',
 			'topic' => 'dekan',
 			'section' => 'POJOK DEKAN',
@@ -74,7 +75,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'kategori' => 'arsip',
 			'topic' => 'wadek',
 			'section' => 'POJOK WAKIL DEKAN',
@@ -96,7 +97,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'kategori' => 'arsip',
 			'topic' => 'dosen',
 			'section' => 'ARTIKEL DOSEN',
@@ -118,7 +119,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'topic' => 'mahasiswa',
 			'kategori' => 'arsip',
 			'section' => 'ARTIKEL MAHASISWA',
@@ -141,7 +142,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'topic' => 'akademik',
 			'kategori' => 'arsip',
 			'section' => 'INFORMASI AKADEMIK',
@@ -163,7 +164,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'kategori' => 'arsip',
 			'topic' => 'alumni',
 			'section' => 'ARTIKEL ALUMNI',
@@ -185,7 +186,7 @@ class Arsip extends CI_Controller
 
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'arsip/arsip',
+			'content' => 'list',
 			'kategori' => 'arsip',
 			'topic' => 'buku',
 			'section' => 'BUKU',

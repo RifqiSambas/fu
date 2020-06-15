@@ -39,7 +39,7 @@ class Akademik extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'akademik/dokumen',
+			'content' => 'list',
 			'kategori' => 'akademik',
 			'section' => 'DOKUMEN',
 			'recent' => $this->M_konten->recent('berita'),

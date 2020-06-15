@@ -17,7 +17,6 @@ class Hmj extends CI_Controller
 			'section' => 'HMJ',
 			'kategori' => 'hmj',
 			'recent' => $this->M_konten->recent('berita'),
-
 		);
 
 		$this->load->view('wrapper', $data);
@@ -27,7 +26,7 @@ class Hmj extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'hmj/th',
+			'content' => 'listh',
 			'kategori' => 'info hmj',
 			'section' => 'JURUSAN TAFSIR HADITS',
 			'recent' => $this->M_konten->recent('berita'),
@@ -41,7 +40,7 @@ class Hmj extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'hmj/fa',
+			'content' => 'lista',
 			'kategori' => 'info hmj',
 			'section' => 'JURUSAN FILSAFAT AGAMA',
 			'recent' => $this->M_konten->recent('berita'),
@@ -55,7 +54,7 @@ class Hmj extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'hmj/pa',
+			'content' => 'lista',
 			'kategori' => 'info hmj',
 			'section' => 'JURUSAN PERBANDINGAN AGAMA',
 			'recent' => $this->M_konten->recent('berita'),
@@ -69,7 +68,7 @@ class Hmj extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'hmj/tp',
+			'content' => 'listp',
 			'kategori' => 'info hmj',
 			'section' => 'JURUSAN TASAWUF PSIKOTERAPI',
 			'recent' => $this->M_konten->recent('berita'),

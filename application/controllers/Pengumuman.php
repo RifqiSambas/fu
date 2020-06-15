@@ -13,7 +13,7 @@ class Pengumuman extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'pengumuman/index',
+			'content' => 'list',
 			'section' => 'PENGUMUMAN',
 			'kategori' => 'pengumuman',
 			'recent' => $this->M_konten->recent('berita'),
@@ -27,7 +27,7 @@ class Pengumuman extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'pengumuman/beasiswa',
+			'content' => 'list',
 			'section' => 'BEASISWA',
 			'kategori' => 'pengumuman',
 			'recent' => $this->M_konten->recent('berita'),
@@ -41,7 +41,7 @@ class Pengumuman extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'pengumuman/kegiatan',
+			'content' => 'list',
 			'section' => 'KEGIATAN KAMI',
 			'kategori' => 'pengumuman',
 			'recent' => $this->M_konten->recent('berita'),
@@ -55,7 +55,7 @@ class Pengumuman extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'pengumuman/lowongan',
+			'content' => 'list',
 			'section' => 'LOWONGAN KERJA',
 			'kategori' => 'pengumuman',
 			'recent' => $this->M_konten->recent('berita'),

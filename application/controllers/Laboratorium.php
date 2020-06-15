@@ -27,7 +27,7 @@ class Laboratorium extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'laboratorium/perpustakaan',
+			'content' => 'list',
 			'section' => 'PERPUSTAKAAN',
 			'kategori' => 'laboratorium',
 			'recent' => $this->M_konten->recent('berita'),
@@ -41,7 +41,7 @@ class Laboratorium extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'laboratorium/judul',
+			'content' => 'list',
 			'section' => 'JUDUL SKRIPSI',
 			'kategori' => 'laboratorium',
 			'recent' => $this->M_konten->recent('berita'),
@@ -55,7 +55,7 @@ class Laboratorium extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/content',
-			'content' => 'laboratorium/abstraksi',
+			'content' => 'list',
 			'section' => 'ABSTRAKSI SKRIPSI',
 			'kategori' => 'laboratorium',
 			'recent' => $this->M_konten->recent('berita'),
