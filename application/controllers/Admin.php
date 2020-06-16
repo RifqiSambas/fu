@@ -6,6 +6,7 @@ class Admin extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->library('session');
 		$this->load->model('M_konten');
 	}
 	public function index()
@@ -426,5 +427,10 @@ class Admin extends CI_Controller
 		);
 
 		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function login()
+	{
+		$this->load->view('login');
 	}
 }
