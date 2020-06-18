@@ -485,16 +485,6 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 .bg-map{ background: url(../images/map.png) no-repeat center; background-size: auto 100%; }
 
-.bg-1{ background: url(../images/workshop_literasi_naskah.jpg) no-repeat top; background-size: cover; }
-.bg-2{ background: url(../images/seminar_nasional.jpg) no-repeat center; background-size: cover; }
-.bg-3{ background: url(../images/foto_bersama.jpg) no-repeat center; background-size: cover; }
-.bg-4{ background: url(../images/rapat_pemantapan.jpg) no-repeat center; background-size: cover; }
-.bg-5{ background: url(../images/slider-5-450x600.jpg) no-repeat center; background-size: cover; }
-.bg-6{ background: url(../images/slider-6-450x600.jpg) no-repeat center; background-size: cover; }
-.bg-7{ background: url(../images/banner-2-300x300.jpg) no-repeat center; background-size: cover; }
-.bg-8{ background: url(../images/slider-5-800x400.jpg) no-repeat center; background-size: cover; }
-.bg-9{ background: url(../images/slider-6-400x400.jpg) no-repeat center; background-size: cover; }
-.bg-10{ background: url(../images/slider-7-400x400.jpg) no-repeat center; background-size: cover; }
 
 
 .bg-grad-layer-6:after{ content:''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1;

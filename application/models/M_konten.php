@@ -24,7 +24,7 @@ class M_konten extends CI_Model
 
 	public function content($column, $offset = 0)
 	{
-		$this->db->order_by('date', 'asc');
+		$this->db->order_by('date', 'desc');
 		$this->db->where('topic', $column);
 		$this->db->limit(4, $offset);
 		return $this->db->get('konten')->result();

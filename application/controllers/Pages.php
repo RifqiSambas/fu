@@ -43,8 +43,7 @@ class Pages extends CI_Controller
 		$pengunjungonline  = $this->db->query("SELECT * FROM visitor WHERE online > '" . $bataswaktu . "'")->num_rows(); // hitung pengunjung online
 
 		$pengunjung = array(
-			'today' => $pengunjunghariini,
-			'total' => $totalpengunjung,
+			'today' => $pengunjunghariini, 'total' => $totalpengunjung,
 			'online' => $pengunjungonline,
 		);
 
@@ -63,6 +62,7 @@ class Pages extends CI_Controller
 			'kegiatan' => $this->M_konten->content('kegiatan'),
 			'sambutan' => $this->M_konten->single('sambutan'),
 			'pengunjung' => $pengunjung,
+			'highlight' => $this->M_konten->content('kegiatan'),
 		);
 
 		$this->load->view('wrapper', $data);

@@ -3,12 +3,10 @@
 		<div class="row">
 			<div class="col-md-12 col-lg-8">
 				<div class="row mb-30">
-					<!-- START OF LIFESTYLE -->
 					<div class="col-sm-12 col-md-12">
 						<div class="p-30 card-view mb-15">
 							<?php $this->load->view('home/component/pengumuman') ?>
 						</div>
-						<!-- p-30 card-view -->
 					</div>
 				</div>
 			</div>

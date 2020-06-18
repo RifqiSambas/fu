@@ -9,14 +9,13 @@ class Konten extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('session');
 		$this->load->model('M_konten');
 		$this->load->library('upload');
 	}
 
 	public function index()
 	{
-		if ($this->uri->segement(3) !== null) {
+		if ($this->uri->segment(3) !== null) {
 			redirect('admin');
 		}
 		$data = array(
