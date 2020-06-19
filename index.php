@@ -59,15 +59,17 @@ $server_ip = getHostByName(getHostName());
 if (preg_match("/^(127\.0\.|10\.0\.).+/i", $server_ip)) {
 	define("ENVIRONMENT", "development");
 	define("BASEURL", "http://localhost:8000/");
-	$db = [
-		'username' => 'fu',
-		'password' => 'fu',
-		'database' => 'fu',
-		'hostname' => 'localhost'
-	];
+	define("DB_USERNAME", "fu");
+	define("DB_PASSWORD", "fu");
+	define("DB_NAME", "fu");
+	define("DB_HOSTNAME", "localhost");
 } else {
 	define("ENVIRONMENT", "production");
 	define("BASEURL", "https://fu.sera5.id/");
+	define("DB_USERNAME", "u5257094_fufufu");
+	define("DB_PASSWORD", "fu");
+	define("DB_NAME", "u5257094_fu");
+	define("DB_HOSTNAME", "localhost");
 	$db = [
 		'username' => 'u5257094_fufufu',
 		'password' => 'fu',
