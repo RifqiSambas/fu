@@ -70,12 +70,6 @@ if (preg_match("/^(127\.0\.|10\.0\.).+/i", $server_ip)) {
 	define("DB_PASSWORD", "fu");
 	define("DB_NAME", "u5257094_fu");
 	define("DB_HOSTNAME", "localhost");
-	$db = [
-		'username' => 'u5257094_fufufu',
-		'password' => 'fu',
-		'database' => 'u5257094_fu',
-		'hostname' => 'localhost'
-	];
 }
 /*
  *---------------------------------------------------------------
