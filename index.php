@@ -64,7 +64,7 @@ if (preg_match("/^(127\.0\.|10\.0\.).+/i", $server_ip)) {
 	define("DB_NAME", "fu");
 	define("DB_HOSTNAME", "localhost");
 } else {
-	define("ENVIRONMENT", "production");
+	define("ENVIRONMENT", "development");
 	define("BASEURL", "https://fu.sera5.id/");
 	define("DB_USERNAME", "u5257094_fufufu");
 	define("DB_PASSWORD", "fu");
