@@ -54,9 +54,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-$server_ip = getHostByName(getHostName());
-
-if (preg_match("/^(127\.0\.|10\.0\.).+/i", $server_ip)) {
+if ($_SERVER['HTTP_HOST'] == 'localhost:8000') {
 	define("ENVIRONMENT", "development");
 	define("BASEURL", "http://localhost:8000/");
 	define("DB_USERNAME", "fu");
@@ -64,7 +62,7 @@ if (preg_match("/^(127\.0\.|10\.0\.).+/i", $server_ip)) {
 	define("DB_NAME", "fu");
 	define("DB_HOSTNAME", "localhost");
 } else {
-	define("ENVIRONMENT", "development");
+	define("ENVIRONMENT", "production");
 	define("BASEURL", "https://fu.sera5.id/");
 	define("DB_USERNAME", "u5257094_fufufu");
 	define("DB_PASSWORD", "fu");
