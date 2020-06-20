@@ -13,7 +13,7 @@ class Pengabdian extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'list',
+			'content' => 'pengabdian',
 			'section' => 'PENGABDIAN',
 			'kategori' => 'pengabdian',
 			'recent' => $this->M_konten->recent('pengabdian'),

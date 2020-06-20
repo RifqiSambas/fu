@@ -13,8 +13,9 @@ class Arsip extends CI_Controller
 	public function index()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/main_content',
-			'content' => 'index',
+			'content' => 'arsip',
 			'section' => 'ARSIP',
 			'kategori' => 'arsip',
 		);
@@ -29,6 +30,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',
@@ -51,6 +53,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',
@@ -74,6 +77,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',
@@ -96,6 +100,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',
@@ -118,6 +123,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'topic' => 'mahasiswa',
@@ -141,6 +147,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'topic' => 'akademik',
@@ -163,6 +170,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',
@@ -185,6 +193,7 @@ class Arsip extends CI_Controller
 		else if ($at > 1) $at = ($at - 1) * 4;
 
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'list',
 			'kategori' => 'arsip',

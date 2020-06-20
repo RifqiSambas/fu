@@ -49,6 +49,7 @@ class Pages extends CI_Controller
 		);
 
 		$data = array(
+			'single' => false,
 			'pages' => 'home/index',
 			'data' => $this->M_konten->content('berita'),
 			'berita' => $this->M_konten->content('berita'),

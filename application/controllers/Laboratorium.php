@@ -13,7 +13,7 @@ class Laboratorium extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'laboratorium/index',
+			'content' => 'laboratorium',
 			'section' => 'LABORATORIUM',
 			'kategori' => 'laboratorium',
 		);

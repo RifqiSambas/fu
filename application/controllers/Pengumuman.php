@@ -13,7 +13,7 @@ class Pengumuman extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'list',
+			'content' => 'pengumuman',
 			'section' => 'PENGUMUMAN',
 			'kategori' => 'pengumuman',
 			'recent' => $this->M_konten->recent('berita'),

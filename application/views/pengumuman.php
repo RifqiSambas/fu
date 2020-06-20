@@ -1,12 +1,12 @@
 <?php
 $data = array(
 	[
-		"nama" => "PENGUMUMAN",
-		"url" => "pengumuman",
+		"nama" => "BEASISWA",
+		"url" => "beasiswa",
 	],
 	[
-		"nama" => "KONSELING",
-		"url" => "konsenling",
+		"nama" => "KEGIATAN KAMI",
+		"url" => "kegiatan",
 	],
 	[
 		"nama" => "LOWONGAN KERJA",

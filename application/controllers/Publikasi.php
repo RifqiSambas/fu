@@ -12,7 +12,7 @@ class Publikasi extends CI_Controller
 	{
 		$data = array(
 			'pages' => 'common/main_content',
-			'content' => 'publikasi/index',
+			'content' => 'publikasi',
 			'section' => 'PUBLIKASI',
 			'kategori' => 'publikasi',
 			'recent' => $this->M_konten->recent('berita'),
