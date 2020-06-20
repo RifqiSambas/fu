@@ -57,10 +57,11 @@
 if ($_SERVER['HTTP_HOST'] == 'localhost:8000') {
 	define("ENVIRONMENT", "development");
 	define("BASEURL", "http://localhost:8000/");
-	define("DB_USERNAME", "fu");
-	define("DB_PASSWORD", "fu");
-	define("DB_NAME", "fu");
-	define("DB_HOSTNAME", "localhost");
+	define("BASEURL", "https://fu.sera5.id/");
+	define("DB_USERNAME", "u5257094_fufufu");
+	define("DB_PASSWORD", "fufufu");
+	define("DB_NAME", "u5257094_fu");
+	define("DB_HOSTNAME", "sera5.id");
 } else {
 	define("ENVIRONMENT", "development");
 	define("BASEURL", "https://fu.sera5.id/");
