@@ -51,11 +51,11 @@ $hmj = array(
 $laboratorium = array(
 	[
 		"nama" => "PERPUSTAKAAN",
-		"url" => "desa",
+		"url" => "perpustakaan",
 	],
 	[
 		"nama" => "JUDUL SKRIPSI",
-		"url" => "konsenling",
+		"url" => "judul",
 	],
 	[
 		"nama" => "ABSTRAKSI SKRIPSI",
