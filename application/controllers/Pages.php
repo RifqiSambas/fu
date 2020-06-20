@@ -23,7 +23,7 @@ class Pages extends CI_Controller
 			'alumni' => $this->M_konten->pages('alumni'),
 			'mahasiswa' => $this->M_konten->pages('mahasiswa'),
 			'buku' => $this->M_konten->pages('buku', 4),
-			'akademik' => $this->M_konten->content('akademik'),
+			'akademik' => $this->M_konten->pages('akademik', 4),
 			'pengumuman' => $this->M_konten->content_cat('pengumuman'),
 			'kegiatan' => $this->M_konten->content('kegiatan'),
 			'sambutan' => $this->M_konten->single('sambutan'),
@@ -37,5 +37,10 @@ class Pages extends CI_Controller
 	public function login()
 	{
 		$this->load->view('login');
+	}
+
+	public function register()
+	{
+		$this->load->view('register.php');
 	}
 }

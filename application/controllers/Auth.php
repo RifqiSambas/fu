@@ -30,4 +30,23 @@ class Auth extends CI_Controller
 		$this->session->sess_destroy();
 		redirect('admin');
 	}
+
+	public function register()
+	{
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		$confirmation = $this->input->post('confirmation');
+
+		if ($password !== $confirmation) {
+			redirect('pages/register');
+		} else {
+			$data = array(
+				'email' => $email,
+				'status' => 'login',
+			);
+
+			$this->session->set_userdata($data);
+			redirect('admin');
+		}
+	}
 }
