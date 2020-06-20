@@ -87,6 +87,13 @@ class Admin extends CI_Controller
 						'list' => true,
 					],
 					[
+						'nama' => 'Informasi Akademik',
+						'url' => 'akademik',
+						'icon' => 'android-add',
+						'aksi' => 'Tambah',
+						'list' => true,
+					],
+					[
 						'nama' => 'Pojok Dekan',
 						'url' => 'dekan',
 						'icon' => 'android-add',
@@ -257,12 +264,24 @@ class Admin extends CI_Controller
 		);
 		$this->load->view('admin/wrapper', $data);
 	}
+
 	public function berita()
 	{
 		$data = array(
 			'data' => $this->M_konten->list('berita'),
 			'pages' => 'admin/list',
 			'title' => 'BERITA',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function akademik()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('akademik'),
+			'pages' => 'admin/list',
+			'title' => 'INFORMASI AKADEMIK',
 		);
 
 		$this->load->view('admin/wrapper', $data);

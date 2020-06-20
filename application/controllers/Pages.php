@@ -23,7 +23,7 @@ class Pages extends CI_Controller
 			'alumni' => $this->M_konten->pages('alumni'),
 			'mahasiswa' => $this->M_konten->pages('mahasiswa'),
 			'buku' => $this->M_konten->pages('buku', 4),
-			'akademik' => $this->M_konten->content('dekan'),
+			'akademik' => $this->M_konten->content('akademik'),
 			'pengumuman' => $this->M_konten->content_cat('pengumuman'),
 			'kegiatan' => $this->M_konten->content('kegiatan'),
 			'sambutan' => $this->M_konten->single('sambutan'),
