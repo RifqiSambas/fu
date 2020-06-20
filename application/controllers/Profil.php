@@ -12,6 +12,7 @@ class Profil extends CI_Controller
 	public function index()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/main_content',
 			'content' => 'profil/index',
 			'section' => 'PROFIL',
@@ -25,6 +26,7 @@ class Profil extends CI_Controller
 	public function sejarah()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'profil/sejarah',
 			'section' => 'SEJARAH',
@@ -39,6 +41,7 @@ class Profil extends CI_Controller
 	public function visi()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'profil/visi',
 			'kategori' => 'profil',
@@ -53,6 +56,7 @@ class Profil extends CI_Controller
 	public function program()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'profil/program',
 			'kategori' => 'profil',
@@ -67,6 +71,7 @@ class Profil extends CI_Controller
 	public function staf()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'profil/staf',
 			'kategori' => 'profil',
@@ -81,6 +86,7 @@ class Profil extends CI_Controller
 	public function struktur()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'profil/struktur',
 			'kategori' => 'profil',
