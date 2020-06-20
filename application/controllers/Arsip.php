@@ -15,7 +15,7 @@ class Arsip extends CI_Controller
 		$data = array(
 			'single' => false,
 			'pages' => 'common/main_content',
-			'content' => 'arsip',
+			'content' => 'list_category',
 			'section' => 'ARSIP',
 			'kategori' => 'arsip',
 		);
@@ -32,7 +32,7 @@ class Arsip extends CI_Controller
 		$data = array(
 			'single' => false,
 			'pages' => 'common/content',
-			'content' => 'list',
+			'content' => 'list_topic',
 			'kategori' => 'arsip',
 			'topic' => 'berita',
 			'section' => 'BERITA',
