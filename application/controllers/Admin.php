@@ -7,7 +7,12 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_konten');
+		$this->load->library('session');
+		if ($this->session->userdata('status') !== "login") {
+			redirect('pages/login');
+		}
 	}
+
 	public function index()
 	{
 		$data = array(
@@ -252,7 +257,6 @@ class Admin extends CI_Controller
 		);
 		$this->load->view('admin/wrapper', $data);
 	}
-
 	public function berita()
 	{
 		$data = array(
@@ -422,14 +426,9 @@ class Admin extends CI_Controller
 		$data = array(
 			'data' => $this->M_konten->list('lowongan'),
 			'pages' => 'admin/list',
-			'title' => '',
+			'title' => 'LOWONGAN KERJA',
 		);
 
 		$this->load->view('admin/wrapper', $data);
-	}
-
-	public function login()
-	{
-		$this->load->view('login');
 	}
 }

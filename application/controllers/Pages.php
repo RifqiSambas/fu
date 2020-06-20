@@ -33,4 +33,9 @@ class Pages extends CI_Controller
 
 		$this->load->view('wrapper', $data);
 	}
+
+	public function login()
+	{
+		$this->load->view('login');
+	}
 }
