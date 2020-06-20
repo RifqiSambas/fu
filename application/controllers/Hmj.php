@@ -3,76 +3,52 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Hmj extends CI_Controller
 {
+	public $kategori = "hmj";
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_konten');
 	}
 
-	public function index()
+	public function index($at = 1)
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/main_content',
-			'content' => 'hmj',
+			'content' => 'list_category',
 			'section' => 'INFO HMJ',
-			'kategori' => 'info hmj',
+			'kategori' => 'hmj',
 		);
 
 		$this->load->view('wrapper', $data);
 	}
 
-	public function th()
+	public function th($at = 1)
 	{
-		$data = array(
-			'pages' => 'common/content',
-			'content' => 'hmj/th',
-			'kategori' => 'info hmj',
-			'section' => 'JURUSAN TAFSIR HADITS',
-			'recent' => $this->M_konten->recent('hmj'),
-		);
-
-		$this->load->view('wrapper', $data);
+		$topic = 'th';
+		$section = 'JURUSAN TAFSIR HADITS';
+		$this->M_konten->wrp($this->kategori, $topic, $section, $at);
 	}
 
-	public function fa()
+	public function fa($at = 1)
 	{
-		$data = array(
-			'pages' => 'common/content',
-			'content' => 'hmj/fa',
-			'kategori' => 'info hmj',
-			'section' => 'JURUSAN FILSAFAT AGAMA',
-			'recent' => $this->M_konten->recent('hmj'),
-
-		);
-
-		$this->load->view('wrapper', $data);
+		$topic = 'fa';
+		$section = 'JURUSAN FILSAFAT AGAMA';
+		$this->M_konten->wrp($this->kategori, $topic, $section, $at);
 	}
 
-	public function pa()
+	public function pa($at = 1)
 	{
-		$data = array(
-			'pages' => 'common/content',
-			'content' => 'hmj/pa',
-			'kategori' => 'info hmj',
-			'section' => 'JURUSAN PERBANDINGAN AGAMA',
-			'recent' => $this->M_konten->recent('hmj'),
-
-		);
-
-		$this->load->view('wrapper', $data);
+		$topic = 'pa';
+		$section = 'JURUSAN PERBANDINGAN AGAMA';
+		$this->M_konten->wrp($this->kategori, $topic, $section, $at);
 	}
 
-	public function tp()
+	public function tp($at = 1)
 	{
-		$data = array(
-			'pages' => 'common/content',
-			'content' => 'hmj/tp',
-			'kategori' => 'info hmj',
-			'section' => 'JURUSAN TASAWUF PSIKOTERAPI',
-			'recent' => $this->M_konten->recent('hmj'),
-
-		);
-
-		$this->load->view('wrapper', $data);
+		$topic = 'tp';
+		$section = 'JURUSAN TASAWUF PSIKOTERAPI';
+		$this->M_konten->wrp($this->kategori, $topic, $section, $at);
 	}
 }

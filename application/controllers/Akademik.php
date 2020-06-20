@@ -3,6 +3,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Akademik extends CI_Controller
 {
+	public $kategori = "akademik";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -12,6 +14,7 @@ class Akademik extends CI_Controller
 	public function index()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/main_content',
 			'content' => 'akademik/index',
 			'section' => 'AKADEMIK',
@@ -25,6 +28,7 @@ class Akademik extends CI_Controller
 	public function kalender()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'akademik/kalender',
 			'kategori' => 'akademik',
@@ -37,29 +41,16 @@ class Akademik extends CI_Controller
 
 	public function dokumen($at = 1)
 	{
-		$part = $at;
-		if ($at == 1) $at = $at - 1;
-		else if ($at > 1) $at = ($at - 1) * 4;
 
-		$data = array(
-			'pages' => 'common/content',
-			'content' => 'list',
-			'kategori' => 'akademik',
-			'topic' => 'dokumen',
-			'section' => 'DOKUMEN',
-			'data' => $this->M_konten->content('dokumen', $at),
-			'recent' => $this->M_konten->recent('dokumen'),
-			'jumlah' => $this->M_konten->part('dokumen'),
-			'at' => $at,
-			'part' => $part,
-		);
-
-		$this->load->view('wrapper', $data);
+		$topic = 'dokumen';
+		$section = 'DOKUMEN';
+		$this->M_konten->wrp($this->kategori, $topic, $section, $at);
 	}
 
 	public function pmb()
 	{
 		$data = array(
+			'single' => false,
 			'pages' => 'common/content',
 			'content' => 'akademik/pmb',
 			'kategori' => 'akademik',

@@ -1,9 +1,65 @@
 <?php
 class M_konten extends CI_Model
 {
+
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	public function save($content)
 	{
 		return $this->db->insert('konten', $content);
+	}
+
+	public function wrp($kategori, $topic, $section, $at, $single = false)
+	{
+		$part = $at;
+		if ($at == 1) $at = $at - 1;
+		else if ($at > 1) $at = ($at - 1) * 4;
+
+
+		$data = array(
+			'single' => $single,
+			'pages' => 'common/content',
+			'content' => 'list_topic',
+			'kategori' => $kategori,
+			'topic' => $topic,
+			'section' => $section,
+			'data' => $this->M_konten->content($topic, $at),
+			'recent' => $this->M_konten->recent($topic),
+			'jumlah' => $this->M_konten->part($topic),
+			'at' => $at,
+			'part' => $part,
+		);
+		$this->load->view('wrapper', $data);
+	}
+
+	public function visitor()
+	{
+		$ip    = $this->input->ip_address();
+		$date  = date("Y-m-d");
+		$waktu = time();
+		$timeinsert = date("Y-m-d H:i:s");
+		$s = $this->db->query("SELECT * FROM visitor WHERE ip='" . $ip . "' AND date='" . $date . "'")->num_rows();
+		$ss = isset($s) ? ($s) : 0;
+		if ($ss == 0) {
+			$this->db->query("INSERT INTO visitor(ip, date, hits, online, time) VALUES('" . $ip . "','" . $date . "','1','" . $waktu . "','" . $timeinsert . "')");
+		} else {
+			$this->db->query("UPDATE visitor SET hits=hits+1, online='" . $waktu . "' WHERE ip='" . $ip . "' AND date='" . $date . "'");
+		}
+		$pengunjunghariini  = $this->db->query("SELECT * FROM visitor WHERE date='" . $date . "' GROUP BY ip")->num_rows();
+		$dbpengunjung = $this->db->query("SELECT COUNT(hits) as hits FROM visitor")->row();
+		$totalpengunjung = isset($dbpengunjung->hits) ? ($dbpengunjung->hits) : 0;
+		$bataswaktu = time() - 300;
+		$pengunjungonline  = $this->db->query("SELECT * FROM visitor WHERE online > '" . $bataswaktu . "'")->num_rows();
+
+		$pengunjung = array(
+			'today' => $pengunjunghariini,
+			'total' => $totalpengunjung,
+			'online' => $pengunjungonline,
+		);
+		return $pengunjung;
 	}
 
 	public function delete($id)
