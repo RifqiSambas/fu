@@ -23,7 +23,7 @@ $data = array(
 	<?php foreach ($data as $data) { ?>
 		<div class="col-md-4">
 			<div class="mb-30 mt-md-30 p-30 card-view">
-				<a href="<?= base_url('profil/' . $data['url']) ?>">
+				<a href="<?= base_url('hmj/' . $data['url']) ?>">
 					<h4 class="p-title">
 						<b><?= $data['nama'] ?></b>
 					</h4>

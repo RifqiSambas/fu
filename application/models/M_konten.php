@@ -73,6 +73,13 @@ class M_konten extends CI_Model
 		return $this->db->get('konten')->row();
 	}
 
+	public function get_category($id)
+	{
+		$this->db->select('category');
+		$this->db->where('id', $id);
+		return $this->db->get('konten')->row();
+	}
+
 	public function content_cat($category)
 	{
 		$this->db->where('category', $category);

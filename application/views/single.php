@@ -1,5 +1,3 @@
-<?php $this->load->view('common/start') ?>
-<?php $this->load->view('common/header') ?>
 <style>
 	p {
 		text-align: justify;
@@ -33,5 +31,3 @@
 		</div>
 	</div>
 </section>
-<?php $this->load->view('common/footer') ?>
-<?php $this->load->view('common/end') ?>
