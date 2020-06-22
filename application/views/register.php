@@ -53,7 +53,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 								</div>
-								<input class="form-control" placeholder="******" type="password" name="confirmation" minlength="8" required>
+								<input class="form-control" placeholder="ketik ulang password" type="password" name="confirmation" minlength="8" required>
 							</div> <!-- input-group.// -->
 						</div> <!-- form-group// -->
 						<div class="form-group">
