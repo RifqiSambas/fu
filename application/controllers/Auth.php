@@ -18,6 +18,11 @@ class Auth extends CI_Controller
 		$password = $this->input->post('password');
 
 		if ($this->M_auth->login($email, $password) == false) {
+			$data = array(
+				'error' => 'username atau password salah',
+			);
+
+			$this->session->set_userdata($data);
 			redirect('pages/login');
 		} else {
 			$user = $this->M_auth->login($email, $password);
@@ -46,6 +51,11 @@ class Auth extends CI_Controller
 		$confirmation = $this->input->post('confirmation');
 
 		if ($password !== $confirmation) {
+			$data = array(
+				'error' => 'data yang anda masukan belum benar',
+			);
+
+			$this->session->set_userdata($data);
 			redirect('pages/register');
 		} else {
 			$data = array(
@@ -65,6 +75,11 @@ class Auth extends CI_Controller
 				$this->session->set_userdata($data);
 				redirect('admin');
 			} else {
+				$data = array(
+					'error' => 'data yang anda masukan belum benar',
+				);
+
+				$this->session->set_userdata($data);
 				redirect('pages/register');
 			}
 		}
