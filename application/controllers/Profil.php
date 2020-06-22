@@ -3,6 +3,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Profil extends CI_Controller
 {
+	public $kategori = "profil";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -28,13 +30,11 @@ class Profil extends CI_Controller
 		$data = array(
 			'single' => false,
 			'pages' => 'common/content',
-			'content' => 'profil/sejarah',
-			'section' => 'SEJARAH',
-			'kategori' => 'profil',
-			'recent' => $this->M_konten->recent('berita'),
-
+			'kategori' => $this->kategori,
+			'section' => 'PROFIL',
+			'data' => $this->M_konten->single('sejarah'),
+			'recent' => $this->M_konten->recent('profil'),
 		);
-
 		$this->load->view('wrapper', $data);
 	}
 
