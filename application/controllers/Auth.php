@@ -19,7 +19,7 @@ class Auth extends CI_Controller
 
 		if ($this->M_auth->login($email, $password) == false) {
 			$data = array(
-				'error' => 'username atau password salah',
+				'error' => 'email atau password salah',
 			);
 
 			$this->session->set_userdata($data);
