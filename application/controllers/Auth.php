@@ -45,6 +45,11 @@ class Auth extends CI_Controller
 
 	public function register()
 	{
+
+		$register = false;
+
+		if (!$register) redirect('pages/login');
+
 		$email = $this->input->post('email');
 		$nama = $this->input->post('name');
 		$password = $this->input->post('password');

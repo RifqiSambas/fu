@@ -36,11 +36,16 @@ class Pages extends CI_Controller
 
 	public function login()
 	{
+		if ($this->session->userdata('status') == "login") redirect('admin');
 		$this->load->view('login');
 	}
 
 	public function register()
 	{
+		$register = false;
+
+		if ($this->session->userdata('status') == "login") redirect('admin');
+		if (!$register) redirect('pages/login');
 		$this->load->view('register.php');
 	}
 }

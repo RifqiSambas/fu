@@ -7,6 +7,7 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_konten');
+		$this->load->model('M_akun');
 		$this->load->library('session');
 		if ($this->session->userdata('status') !== "login") {
 			redirect('pages/login');
@@ -258,7 +259,14 @@ class Admin extends CI_Controller
 						'icon' => 'edit',
 						'aksi' => 'Edit',
 						'list' => false
-					]
+					],
+					[
+						'nama' => 'Akun',
+						'url' => 'account',
+						'icon' => 'android-add',
+						'aksi' => 'Tambah',
+						'list' => true,
+					],
 				]
 			],
 		);
@@ -448,6 +456,16 @@ class Admin extends CI_Controller
 			'title' => 'LOWONGAN KERJA',
 		);
 
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function account()
+	{
+		$data = array(
+			'data' => $this->M_akun->list(),
+			'pages' => 'admin/list_akun',
+			'title' => 'AKUN',
+		);
 		$this->load->view('admin/wrapper', $data);
 	}
 }
