@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `account`
+--
+
+DROP TABLE IF EXISTS `account`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `account`
+--
+
+LOCK TABLES `account` WRITE;
+/*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES (1,'rifqi@sera5.id','05af6fc84a265bd23c2b0d896a41de52','rifqi',1),(2,'admin@fu.uinsgd.ac.id','cc0675772bdda00a9b89906a70d7e25d','admin',1);
+/*!40000 ALTER TABLE `account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `konten`
 --
 
@@ -68,7 +96,7 @@ CREATE TABLE `visitor` (
 
 LOCK TABLES `visitor` WRITE;
 /*!40000 ALTER TABLE `visitor` DISABLE KEYS */;
-INSERT INTO `visitor` VALUES ('::1','2020-06-15',33,'1592261131','2020-06-15 22:32:11'),('::1','2020-06-18',40,'1592465200','2020-06-18 06:13:02'),('::1','2020-06-19',4,'1592610772','2020-06-19 23:09:27'),('::1','2020-06-20',27,'1592694583','2020-06-20 01:34:27'),('::1','2020-06-21',1,'1592699929','2020-06-21 00:38:49'),('::1','2020-06-22',7,'1592799963','2020-06-22 04:17:07');
+INSERT INTO `visitor` VALUES ('::1','2020-06-15',33,'1592261131','2020-06-15 22:32:11'),('::1','2020-06-18',40,'1592465200','2020-06-18 06:13:02'),('::1','2020-06-19',4,'1592610772','2020-06-19 23:09:27'),('::1','2020-06-20',27,'1592694583','2020-06-20 01:34:27'),('::1','2020-06-21',1,'1592699929','2020-06-21 00:38:49'),('::1','2020-06-22',8,'1592800016','2020-06-22 04:17:07');
 /*!40000 ALTER TABLE `visitor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-22 11:26:21
+-- Dump completed on 2020-06-22 11:57:23
