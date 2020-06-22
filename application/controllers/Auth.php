@@ -8,6 +8,7 @@ class Auth extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_konten');
+		$this->load->model('M_auth');
 		$this->load->library('session');
 	}
 
@@ -16,13 +17,19 @@ class Auth extends CI_Controller
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 
-		$data = array(
-			'email' => $email,
-			'status' => 'login',
-		);
-
-		$this->session->set_userdata($data);
-		redirect('admin');
+		if ($this->M_auth->login($email, $password) == false) {
+			redirect('pages/login');
+		} else {
+			$user = $this->M_auth->login($email, $password);
+			$data = array(
+				'nama' => $user->nama,
+				'email' => $user->email,
+				'role' => $user->role,
+				'status' => 'login',
+			);
+			$this->session->set_userdata($data);
+			redirect('admin');
+		}
 	}
 
 	public function logout()
@@ -34,6 +41,7 @@ class Auth extends CI_Controller
 	public function register()
 	{
 		$email = $this->input->post('email');
+		$nama = $this->input->post('name');
 		$password = $this->input->post('password');
 		$confirmation = $this->input->post('confirmation');
 
@@ -42,11 +50,23 @@ class Auth extends CI_Controller
 		} else {
 			$data = array(
 				'email' => $email,
-				'status' => 'login',
+				'nama' => $nama,
+				'password' => md5($password),
+				'role' => 1,
 			);
 
-			$this->session->set_userdata($data);
-			redirect('admin');
+			if ($this->M_auth->register($data)) {
+				$data = array(
+					'email' => $email,
+					'nama' => $nama,
+					'role' => 1,
+					'status'	=> 'login'
+				);
+				$this->session->set_userdata($data);
+				redirect('admin');
+			} else {
+				redirect('pages/register');
+			}
 		}
 	}
 }
