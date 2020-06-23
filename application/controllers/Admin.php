@@ -260,13 +260,6 @@ class Admin extends CI_Controller
 						'aksi' => 'Edit',
 						'list' => false
 					],
-					[
-						'nama' => 'Akun',
-						'url' => 'account',
-						'icon' => 'android-add',
-						'aksi' => 'Tambah',
-						'list' => true,
-					],
 				]
 			],
 		);
@@ -467,5 +460,101 @@ class Admin extends CI_Controller
 			'title' => 'AKUN',
 		);
 		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function tambah()
+	{
+		$data = array(
+			'id' => '',
+			'tipe' => 'tambah',
+			'error' => '',
+			'data' => array(
+				'nama' => '',
+				'email' => '',
+			),
+			'action' => 'Tambah',
+			'url' => 'add',
+		);
+		$this->load->view('admin/akun', $data);
+	}
+
+	public function add()
+	{
+		if ($this->input->post('password') != $this->input->post('confirmation')) {
+			$data = array('error' => 'konfirmasi password tidak cocok');
+			$this->load->view('admin/akun', $data);
+		}
+		$data = array(
+			'nama' => $this->input->post('nama'),
+			'email' => $this->input->post('email'),
+			'role' => 1,
+			'action' => 'Tambah',
+			'url' => 'add',
+			'password' => md5($this->input->post('password')),
+		);
+
+		if ($this->M_akun->add($data))
+			redirect('admin/account');
+		else {
+			$data = array(
+				'nama' => $this->input->post('nama'),
+				'error' => 'gagal menambah akun',
+				'email' => $this->input->post('email'),
+				'role' => 1,
+				'action' => 'Tambah',
+				'url' => 'add',
+				'password' => md5($this->input->post('password')),
+			);
+			$this->load->view('admin/akun', $data);
+		}
+	}
+
+	public function edit($id)
+	{
+		$data = array(
+			'tipe' => 'edit',
+			'id' => $id,
+			'error' => '',
+			'action' => 'Edit',
+			'url' => 'upload',
+			'data' => $this->M_akun->get($id),
+		);
+		$this->load->view('admin/akun', $data);
+	}
+
+	public function upload()
+	{
+		if ($this->input->post('password') != $this->input->post('confirmation')) {
+			$data = array('error' => 'konfirmasi password tidak cocok');
+			$this->load->view('admin/akun', $data);
+		}
+
+		$data = array(
+			'id' => $this->input->post('id'),
+			'nama' => $this->input->post('nama'),
+			'email' => $this->input->post('email'),
+			'role' => 1,
+			'password' => md5($this->input->post('password')),
+		);
+
+		if ($this->M_akun->update($this->input->post('id'), $data))
+			redirect('admin/account');
+		else {
+			$data = array(
+				'nama' => $this->input->post('nama'),
+				'error' => 'gagal mengupdate akun',
+				'email' => $this->input->post('email'),
+				'action' => 'Edit',
+				'url' => 'upload',
+				'password' => md5($this->input->post('password')),
+			);
+			$this->load->view('admin/akun', $data);
+		}
+	}
+
+	public function delete($id)
+	{
+		if ($this->M_akun->delete($id))
+			redirect('admin/account');
 	}
 }

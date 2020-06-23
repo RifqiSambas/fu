@@ -1,6 +1,14 @@
 <div class="col-md-12 col-lg-12">
-	<div class="mb-30 p-30 ptb-sm-25 plr-sm-15 card-view">
-		<h4 class="color-primary p-title"><b>DAFTAR <?= $title ?></b></h4>
+	<div class="mb-30 p-30 pt-sm-25 plr-sm-15 card-view">
+		<div class="row">
+			<h4 class="color-primary p-title">
+				<b>
+					<a href="<?= base_url('admin/tambah') ?>">
+						TAMBAH <?= $title ?>
+					</a>
+				</b>
+			</h4>
+		</div>
 		<table id="list" class="display">
 			<thead>
 				<tr>
@@ -13,17 +21,12 @@
 			<tbody>
 				<?php foreach ($data as $data) { ?>
 					<tr>
-						<td>
-							<a href="<?php //base_url('konten/detail/' . $data->topic . '/' . $data->id) 
-												?>">
-								<?= $data->nama ?>
-							</a>
-						</td>
+						<td><?= $data->nama ?></td>
 						<td><?= $data->email ?></td>
-						<td><?= $data->role ?></td>
+						<td><?php if ($data->role == 1) echo 'admin' ?></td>
 						<td>
-							<a class="text-primary" href="<?= base_url('konten/edit/' . $data->id) ?>">EDIT</a> |
-							<a class="text-danger" href="<?= base_url('konten/delete/' . $data->id) ?>">DELETE</a></td>
+							<a class="text-primary" href="<?= base_url('admin/edit/' . $data->id) ?>">EDIT</a> |
+							<a class="text-danger" href="<?= base_url('admin/delete/' . $data->id) ?>">DELETE</a></td>
 					</tr>
 				<?php } ?>
 			</tbody>
