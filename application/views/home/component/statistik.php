@@ -16,7 +16,7 @@
 <div class="row mb-20">
 	<div class="col-lg-2">
 		<div class="letter-big plr-5 bg-primary color-white bg-primary">
-			<?= $pengunjung['today'] ?>
+			<?= $pengunjung['total'] ?>
 		</div>
 	</div>
 	<div class="col-lg-10 mt-20">
@@ -30,7 +30,7 @@
 <div class="row">
 	<div class="col-lg-2">
 		<div class="letter-big plr-5 bg-primary color-white bg-primary">
-			<?= $pengunjung['today'] ?>
+			<?= $pengunjung['online'] ?>
 		</div>
 	</div>
 	<div class="col-lg-10 mt-20">

@@ -49,16 +49,16 @@ class M_konten extends CI_Model
 			$this->db->query("UPDATE visitor SET hits=hits+1, online='" . $waktu . "' WHERE ip='" . $ip . "' AND date='" . $date . "'");
 		}
 		$pengunjunghariini  = $this->db->query("SELECT * FROM visitor WHERE date='" . $date . "' GROUP BY ip")->num_rows();
-		$dbpengunjung = $this->db->query("SELECT COUNT(hits) as hits FROM visitor")->row();
-		$totalpengunjung = isset($dbpengunjung->hits) ? ($dbpengunjung->hits) : 0;
+		$totalpengunjung = $this->db->query("SELECT COUNT(*) as total FROM visitor")->row();
 		$bataswaktu = time() - 300;
 		$pengunjungonline  = $this->db->query("SELECT * FROM visitor WHERE online > '" . $bataswaktu . "'")->num_rows();
 
 		$pengunjung = array(
 			'today' => $pengunjunghariini,
-			'total' => $totalpengunjung,
+			'total' => $totalpengunjung->total,
 			'online' => $pengunjungonline,
 		);
+
 		return $pengunjung;
 	}
 
