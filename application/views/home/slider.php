@@ -60,6 +60,10 @@
 			display: block;
 			visibility: visible;
 		}
+
+		.card {
+			border: 0px
+		}
 	}
 </style>
 <section class="pt-0 bg-primary">
