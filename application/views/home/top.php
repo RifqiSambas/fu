@@ -13,9 +13,6 @@
 		<div class="row">
 			<div class="col-md-12 col-lg-8">
 				<div class="p-30 card-view mb-30">
-					<?php $this->load->view('home/component/profil') ?>
-				</div>
-				<div class="p-30 card-view mb-30">
 					<?php $this->load->view('home/component/akademik') ?>
 				</div>
 				<div class="p-30 card-view mb-30">

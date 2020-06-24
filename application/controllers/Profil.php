@@ -30,10 +30,11 @@ class Profil extends CI_Controller
 		$data = array(
 			'single' => false,
 			'pages' => 'common/content',
-			'kategori' => $this->kategori,
-			'section' => 'PROFIL',
-			'data' => $this->M_konten->single('sejarah'),
-			'recent' => $this->M_konten->recent('profil'),
+			'content' => 'profil/sejarah',
+			'kategori' => 'profil',
+			'recent' => $this->M_konten->recent('berita'),
+
+			'section' => 'SEJARAH'
 		);
 		$this->load->view('wrapper', $data);
 	}
