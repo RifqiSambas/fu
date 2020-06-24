@@ -66,7 +66,7 @@
 		}
 	}
 </style>
-<section class="pt-0 bg-primary">
+<section class="pt-0 bg-primary d-none d-md-block">
 	<div class="pt-50 plr-50 h-400x h-md-800x h-xs-1000x oflow-hidden">
 		<div class="container-fluid">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -75,9 +75,6 @@
 					<?php foreach ($highlight as $key => $highlight) { ?>
 						<?php if ($key == 0) { ?>
 							<div class="carousel-item col-md-4 active">
-							<?php } else { ?>
-								<div class="carousel-item col-md-4">
-								<?php } ?>
 								<div class="card" style="height:400px">
 									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
 
@@ -99,20 +96,45 @@
 
 									</div>
 								</div>
-								</div>
-							<?php } ?>
 							</div>
+						<?php } else { ?>
+							<div class="carousel-item col-md-4">
+								<div class="card" style="height:400px">
+									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
+
+									<div class="abs-blr color-white p-20">
+										<h3 class="mb-10 mb-sm-5 t-upper">
+											<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight->id) ?>">
+												<strong>
+													<?= $highlight->title ?>
+												</strong>
+											</a>
+										</h3>
+
+										<ul class="list-li-mr-10 color-grey">
+											<li>
+												<i class="mr-5 font-12 ion-clock"></i>
+												<?= $highlight->date ?>
+											</li>
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						<?php } ?>
+					<?php } ?>
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
 		</div>
+		<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
 	</div>
 	</div>
 </section>
