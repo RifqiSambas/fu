@@ -5,7 +5,7 @@
 				<h1 style="margin-top:5px;">RUMAH MODERASI BERAGAMA</h1>
 				<h4>Situs Resmi Fakultas Ushuluddin Universitas Islam Sunan Gunung Djati</h4>
 			</div>
-			<div class="d-lg-none d-md-none col-sm-12">
+			<div class="d-lg-none d-md-none col-sm-12 text-center">
 				<h1 style="margin-top:5px;">RUMAH MODERASI BERAGAMA</h1>
 				<h4>Situs Resmi Fakultas Ushuluddin Universitas Islam Sunan Gunung Djati</h4>
 			</div>

@@ -1,102 +1,140 @@
 <style>
-	.img-bg:hover {
-		border: 2px solid white;
+	@media (min-width: 768px) {
+
+		/* show 3 items */
+		.carousel-inner .active,
+		.carousel-inner .active+.carousel-item,
+		.carousel-inner .active+.carousel-item+.carousel-item {
+			display: block;
+		}
+
+		.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+		.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+		.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+			transition: none;
+		}
+
+		.carousel-inner .carousel-item-next,
+		.carousel-inner .carousel-item-prev {
+			position: relative;
+			transform: translate3d(0, 0, 0);
+		}
+
+		.carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+			position: absolute;
+			top: 0;
+			right: -33.3333%;
+			z-index: -1;
+			display: block;
+			visibility: visible;
+		}
+
+		/* left or forward direction */
+		.active.carousel-item-left+.carousel-item-next.carousel-item-left,
+		.carousel-item-next.carousel-item-left+.carousel-item,
+		.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+		.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+			position: relative;
+			transform: translate3d(-100%, 0, 0);
+			visibility: visible;
+		}
+
+		/* farthest right hidden item must be abso position for animations */
+		.carousel-inner .carousel-item-prev.carousel-item-right {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			display: block;
+			visibility: visible;
+		}
+
+		/* right or prev direction */
+		.active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+		.carousel-item-prev.carousel-item-right+.carousel-item,
+		.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+		.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+			position: relative;
+			transform: translate3d(100%, 0, 0);
+			visibility: visible;
+			display: block;
+			visibility: visible;
+		}
 	}
 </style>
 <section class="pt-0 bg-primary">
-	<div class="pt-50 plr-50 h-600x h-md-800x h-xs-1000x oflow-hidden">
-		<div class="w-60 w-md-100 float-left float-md-none h-100 h-md-40 h-xs-50">
+	<div class="pt-50 plr-50 h-400x h-md-800x h-xs-1000x oflow-hidden">
+		<div class="container-fluid">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner row w-100 mx-auto">
 
-			<div class="w-50 w-xs-100 float-left float-xs-none pos-relative h-100 h-xs-50">
-				<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight[0]->thumbnail) ?>) no-repeat center; background-size: cover"></div>
+					<?php foreach ($highlight as $key => $highlight) { ?>
+						<?php if ($key == 0) { ?>
+							<div class="carousel-item col-md-4 active">
+							<?php } else { ?>
+								<div class="carousel-item col-md-4">
+								<?php } ?>
+								<div class="card" style="height:400px">
+									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
 
-				<div class="abs-blr color-white p-20">
-					<h3 class="mb-10 mb-sm-5 t-upper">
-						<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight[0]->id) ?>">
-							<strong>
-								<?= $highlight[0]->title ?>
-							</strong>
-						</a>
-					</h3>
+									<div class="abs-blr color-white p-20">
+										<h3 class="mb-10 mb-sm-5 t-upper">
+											<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight->id) ?>">
+												<strong>
+													<?= $highlight->title ?>
+												</strong>
+											</a>
+										</h3>
 
-					<ul class="list-li-mr-10 color-grey">
-						<li>
-							<i class="mr-5 font-12 ion-clock"></i>
-							<?= $highlight[0]->date ?>
-						</li>
-					</ul>
+										<ul class="list-li-mr-10 color-grey">
+											<li>
+												<i class="mr-5 font-12 ion-clock"></i>
+												<?= $highlight->date ?>
+											</li>
+										</ul>
 
+									</div>
+								</div>
+								</div>
+							<?php } ?>
+							</div>
 				</div>
 			</div>
-
-			<div class="w-50 w-xs-100 float-left float-xs-none pos-relative h-100 h-xs-50 pt-xs-10">
-				<div class="mlr-10 mr-md-0 ml-xs-0 pos-relative h-100">
-					<!-- Image as bg-2 -->
-					<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight[1]->thumbnail) ?>) no-repeat center; background-size: cover"></div>
-
-					<div class="abs-blr color-white p-20">
-						<h3 class="mb-10 mb-sm-5 t-upper">
-							<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight[1]->id) ?>">
-								<b>
-									<?= $highlight[1]->title ?>
-								</b>
-							</a>
-						</h3>
-						<ul class="list-li-mr-10 color-grey">
-							<li>
-								<i class="mr-5 font-12 ion-clock"></i>
-								<?= $highlight[1]->date ?>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="w-40 w-md-100 float-left float-md-none h-100 h-md-60 h-xs-50">
-			<div class="h-50 pb-5 pt-md-10">
-				<div class="h-100 pos-relative">
-					<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight[2]->thumbnail) ?>) no-repeat center; background-size: cover"></div>
-
-					<div class="abs-blr color-white p-20">
-						<h3 class="mb-10 mb-sm-5 t-upper">
-							<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight[2]->id) ?>">
-								<b>
-									<?= $highlight[2]->title ?>
-								</b>
-							</a>
-						</h3>
-						<ul class="list-li-mr-10 color-ash">
-							<li>
-								<i class="mr-5 font-12 ion-clock"></i>
-								<?= $highlight[2]->date ?>
-							</li>
-							<li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="h-50 pt-5">
-				<div class="h-100 pos-relative">
-					<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight[3]->thumbnail) ?>) no-repeat center; background-size: cover"></div>
-
-					<div class="abs-blr color-white p-20">
-						<h3 class="mb-10 mb-sm-5 t-upper">
-							<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight[3]->id) ?>">
-								<b>
-									<?= $highlight[3]->title ?>
-								</b>
-							</a>
-						</h3>
-						<ul class="list-li-mr-20 color-grey">
-							<li><i class="mr-5 font-12 ion-clock">
-								</i>
-								<?= $highlight[3]->date ?>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</div>
+	</div>
 </section>
+<script>
+	$(document).ready(function() {
+		$("#myCarousel").on("slide.bs.carousel", function(e) {
+			var $e = $(e.relatedTarget);
+			var idx = $e.index();
+			var itemsPerSlide = 3;
+			var totalItems = $(".carousel-item").length;
+
+			if (idx >= totalItems - (itemsPerSlide - 1)) {
+				var it = itemsPerSlide - (totalItems - idx);
+				for (var i = 0; i < it; i++) {
+					// append slides to end
+					if (e.direction == "left") {
+						$(".carousel-item")
+							.eq(i)
+							.appendTo(".carousel-inner");
+					} else {
+						$(".carousel-item")
+							.eq(0)
+							.appendTo($(this).find(".carousel-inner"));
+					}
+				}
+			}
+		});
+	});
+</script>
