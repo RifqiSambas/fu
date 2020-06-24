@@ -25,7 +25,7 @@ class Pages extends CI_Controller
 			'buku' => $this->M_konten->pages('buku', 4),
 			'akademik' => $this->M_konten->pages('akademik', 4),
 			'pengumuman' => $this->M_konten->content_cat('pengumuman'),
-			'kegiatan' => $this->M_konten->content('kegiatan'),
+			'kegiatan' => $this->M_konten->kegiatan(),
 			'sambutan' => $this->M_konten->single('sambutan'),
 			'pengunjung' => $this->M_konten->visitor(),
 			'highlight' => $this->M_konten->content('kegiatan'),

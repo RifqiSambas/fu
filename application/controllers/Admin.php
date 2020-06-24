@@ -441,6 +441,17 @@ class Admin extends CI_Controller
 		$this->load->view('admin/wrapper', $data);
 	}
 
+	public function kegiatan()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('kegiatan'),
+			'pages' => 'admin/list',
+			'title' => 'KEGIATAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
 	public function lowongan()
 	{
 		$data = array(

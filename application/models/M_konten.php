@@ -1,7 +1,6 @@
 <?php
 class M_konten extends CI_Model
 {
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -76,6 +75,13 @@ class M_konten extends CI_Model
 	{
 		$this->db->where('id', $id);
 		return $this->db->replace('konten', $content);
+	}
+
+	public function kegiatan()
+	{
+		$this->db->order_by('date', 'desc');
+		$this->db->where('topic', 'kegiatan');
+		return $this->db->get('konten')->result();
 	}
 
 	public function content($column, $offset = 0)
