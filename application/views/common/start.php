@@ -10,10 +10,9 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 	<link href="<?= base_url('assets/plugin-frameworks/bootstrap.css') ?>" rel=" stylesheet">
 
-	<link href="<?= base_url('assets/fonts/ionicons.css" rel="stylesheet') ?>">
-
 
 	<link href="<?= base_url('assets/common/styles.css" rel="stylesheet') ?>">
 
+	<link href="<?= base_url('assets/') ?>fonts/ionicons.css" rel="stylesheet" />
 
 </head>
