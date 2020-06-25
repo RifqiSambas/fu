@@ -75,7 +75,7 @@
 						<?php if ($key == 0) { ?>
 							<div class="carousel-item col-md-4 active">
 								<div class="card" style="height:400px">
-									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
+									<div class="img-bg bg-grad-layer-6 d-md-none d-lg-none" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
 									<img src="<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>" alt="" srcset="" />
 									<div class="abs-blr color-white p-20">
 										<h3 class="mb-10 mb-sm-5 t-upper">
@@ -99,7 +99,7 @@
 						<?php } else { ?>
 							<div class="carousel-item col-md-4">
 								<div class="card" style="height:400px">
-									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
+									<div class="img-bg bg-grad-layer-6 d-md-none d-lg-none" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
 
 									<img src="<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>" alt="" srcset="" />
 									<div class="abs-blr color-white p-20">
