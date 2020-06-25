@@ -42,7 +42,7 @@
 				</div>
 				<!-- col-sm-2 -->
 
-				<div class="col-lg-4 col-md-8 col-sm-8">
+				<div class="col-lg-4 col-md-8 col-sm-12">
 					<div class="pr-10 pr-sm-0">
 						<h5 class="f-title"><b>HUBUNGI KAMI</b></h5>
 
@@ -66,21 +66,21 @@
 
 			<div class="text-center ptb-30">
 				<div class="row">
-					<div class="col-sm-3">
+					<div class="col-sm-12 col-md-4">
 						<a class="mtb-10" href="#">
 							<h2>Fakultas Ushuluddin</h2>
 						</a>
 					</div>
 					<!-- col-sm-3 -->
 
-					<div class="col-sm-5">
+					<div class="col-sm-21 col-md-4">
 						<p class="mtb-10">
 							"Menjadi pusat studi dan informasi keushuluddinan yang unggul dan kompetitif di Asean tahun 2025”
 						</p>
 					</div>
 					<!-- col-sm-3 -->
 
-					<div class="col-sm-4">
+					<div class="col-sm-12 col-md-4">
 						<ul class="mtb-10 font-12 list-radial-35 list-li-mlr-3">
 							<li>
 								<a href="#"><i class="ion-social-facebook"></i></a>
