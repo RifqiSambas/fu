@@ -266,6 +266,73 @@ class Admin extends CI_Controller
 		$this->load->view('admin/wrapper', $data);
 	}
 
+	public function th()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('th'),
+			'pages' => 'admin/list',
+			'title' => 'TAFSIR HADITS',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function fa()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('dokumen'),
+			'pages' => 'admin/list',
+			'title' => 'FILSAFAT AGAMA',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function pa()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('pa'),
+			'pages' => 'admin/list',
+			'title' => 'PERBANDINGAN AGAMA',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+
+	public function tp()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('tp'),
+			'pages' => 'admin/list',
+			'title' => 'TASAWUF PSIKOTERAPI',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function dokumen()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('dokumen'),
+			'pages' => 'admin/list',
+			'title' => 'DOKUMEN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
+	public function desa()
+	{
+		$data = array(
+			'data' => $this->M_konten->list('desa'),
+			'pages' => 'admin/list',
+			'title' => 'DESA BINAAN',
+		);
+
+		$this->load->view('admin/wrapper', $data);
+	}
+
 	public function berita()
 	{
 		$data = array(
