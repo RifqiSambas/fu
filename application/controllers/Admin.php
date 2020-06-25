@@ -19,43 +19,43 @@ class Admin extends CI_Controller
 		$data = array(
 			'pages' => 'admin/dashboard',
 			'menu' => [
-				'profil' => [
-					[
-						'nama' => 'Sejarah',
-						'url' => 'sejarah',
-						'icon' => 'edit',
-						'aksi' => 'Edit',
-						'list' => false,
-					],
-					[
-						'nama' => 'Visi Misi Tujuan',
-						'url' => 'visi',
-						'icon' => 'edit',
-						'aksi' => 'Edit',
-						'list' => false,
-					],
-					[
-						'nama' => 'Program Studi',
-						'url' => 'program',
-						'icon' => 'edit',
-						'aksi' => 'Edit',
-						'list' => false,
-					],
-					[
-						'nama' => 'Staf Pengajar',
-						'url' => 'staf',
-						'icon' => 'edit',
-						'aksi' => 'Edit',
-						'list' => false,
-					],
-					[
-						'nama' => 'Struktur Kepengurusan',
-						'url' => 'struktur',
-						'icon' => 'edit',
-						'aksi' => 'Edit',
-						'list' => false,
-					],
-				],
+				//'profil' => [
+				//[
+				//'nama' => 'Sejarah',
+				//'url' => 'sejarah',
+				//'icon' => 'edit',
+				//'aksi' => 'Edit',
+				//'list' => false,
+				//],
+				//[
+				//'nama' => 'Visi Misi Tujuan',
+				//'url' => 'visi',
+				//'icon' => 'edit',
+				//'aksi' => 'Edit',
+				//'list' => false,
+				//],
+				//[
+				//'nama' => 'Program Studi',
+				//'url' => 'program',
+				//'icon' => 'edit',
+				//'aksi' => 'Edit',
+				//'list' => false,
+				//],
+				//[
+				//'nama' => 'Staf Pengajar',
+				//'url' => 'staf',
+				//'icon' => 'edit',
+				//'aksi' => 'Edit',
+				//'list' => false,
+				//],
+				//[
+				//'nama' => 'Struktur Kepengurusan',
+				//'url' => 'struktur',
+				//'icon' => 'edit',
+				//'aksi' => 'Edit',
+				//'list' => false,
+				//],
+				//],
 				'akademik' => [
 					[
 						'nama' => 'Kalender',
