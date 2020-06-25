@@ -66,18 +66,17 @@
 		}
 	}
 </style>
-<section class="pt-0 bg-primary d-none d-md-block">
-	<div class="pt-50 plr-50 h-400x h-md-800x h-xs-1000x oflow-hidden">
+<section class="pt-0 bg-primary">
+	<div class="pt-50 plr-50 h-450x h-xs-500x">
 		<div class="container-fluid">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner row w-100 mx-auto">
-
+				<div class="carousel-inner row mx-auto">
 					<?php foreach ($highlight as $key => $highlight) { ?>
 						<?php if ($key == 0) { ?>
 							<div class="carousel-item col-md-4 active">
 								<div class="card" style="height:400px">
 									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
-
+									<img src="<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>" alt="" srcset="" />
 									<div class="abs-blr color-white p-20">
 										<h3 class="mb-10 mb-sm-5 t-upper">
 											<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight->id) ?>">
@@ -102,6 +101,7 @@
 								<div class="card" style="height:400px">
 									<div class="img-bg bg-grad-layer-6" style="background:url(<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>) no-repeat center; background-size: cover"></div>
 
+									<img src="<?= base_url('assets/uploads/' . $highlight->thumbnail) ?>" alt="" srcset="" />
 									<div class="abs-blr color-white p-20">
 										<h3 class="mb-10 mb-sm-5 t-upper">
 											<a class="hover-grey" href="<?= base_url('konten/detail/kegiatan/' . $highlight->id) ?>">
