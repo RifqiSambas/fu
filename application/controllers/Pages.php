@@ -29,6 +29,7 @@ class Pages extends CI_Controller
 			'sambutan' => $this->M_konten->single('sambutan'),
 			'pengunjung' => $this->M_konten->visitor(),
 			'highlight' => $this->M_konten->content('kegiatan'),
+			//'running'	=> $this->M_konten->running(),
 		);
 
 		$this->load->view('wrapper', $data);

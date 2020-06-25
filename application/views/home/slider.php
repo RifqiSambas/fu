@@ -138,3 +138,14 @@
 	</div>
 	</div>
 </section>
+<section>
+	<h4>
+		<marquee behavior="" direction="">
+			running text -
+			running text -
+			running text -
+			running text -
+			running text
+		</marquee>
+	</h4>
+</section>
